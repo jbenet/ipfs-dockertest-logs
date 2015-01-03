@@ -6,6 +6,41 @@
 - client_1 (correctly stuck waiting for server to add the file...)
 - server_1 ipfs add just triggers nothing... (need more logs?)
 - looking at [dht-provides](dht-provides) we can see that the server DOES provide 4 blocks (1 for tiny file, 3 for rand file):
+- server_1 fails to provide other 187/191 blocks
+
+
+## Notes
+
+- completes first (tiny) file transfer
+- server_1 does not finish adding file ("dockertest> added rand file" not found)
+")
+- client_1 (correctly stuck waiting for server to add the file...)
+
+note how client_1 correctly moves on to "waiting for server to add the file"
+note how "server_1 | dockertest> added rand file" is not there.
+
+```
+% cat full | grep dockertest
+Attaching to dockertest_bootstrap_1, dockertest_data_1, dockertest_server_1, dockertest_client_1
+server_1    | dockertest> starting server daemon
+client_1    | dockertest> starting client daemon
+server_1    | dockertest> added tiny file. hash is QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+client_1    | dockertest> client found file with hash: QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+...
+```
+
+
+- looking at [dht-provides](dht-provides) we can see that the server DOES provide 4 blocks (1 for tiny file, 3 for rand file):
+
 
 ```
 QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf // tiny file
@@ -23,6 +58,8 @@ server_1    | 2015-01-03 15:12:10.501322 DEBUG dht prefixlog.go:107: <peer.ID Qm
 client_1    | 2015-01-03 15:12:12.455402 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> putProvider: <peer.ID QmNXuB> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf ([/ip4/172.17.2.19/tcp/4031 /ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp])
 client_1    | 2015-01-03 15:12:12.456781 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> putProvider: <peer.ID Qmbtc2> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf ([/ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp /ip4/172.17.2.19/tcp/4031])
 ```
+
+- server_1 fails to provide other 187/191 blocks
 
 Note that randfile is big enough for 191 blocks. (See [data readme](../data))
 But server stops adding providers. Server dht output below.
