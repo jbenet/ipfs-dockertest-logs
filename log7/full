@@ -1,0 +1,1087 @@
+sh bin/clean.sh
+91112f709419
+df6c132e0ce2
+1a33fd0e510c
+c8c0e838b8f1
+fig stop
+fig rm -v --force
+No stopped containers
+rm -f bin/random
+rm -f data/filetiny
+rm -f data/filerand
+rm -rf build/*
+cd .. && docker build -t ipfs-test-latest .
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon 62.95 MBSending build context to Docker daemon  63.5 MBSending build context to Docker daemon 64.06 MBSending build context to Docker daemon 64.62 MBSending build context to Docker daemon 65.18 MBSending build context to Docker daemon 65.73 MBSending build context to Docker daemon 66.29 MBSending build context to Docker daemon 66.85 MBSending build context to Docker daemon  67.4 MBSending build context to Docker daemon 67.96 MBSending build context to Docker daemon 68.52 MBSending build context to Docker daemon 69.07 MBSending build context to Docker daemon 69.63 MBSending build context to Docker daemon 70.19 MBSending build context to Docker daemon 70.75 MBSending build context to Docker daemon  71.3 MBSending build context to Docker daemon 71.86 MBSending build context to Docker daemon 72.42 MBSending build context to Docker daemon 72.53 MB
+Sending build context to Docker daemon 
+Step 0 : FROM golang:1.3
+ ---> ef701a3b8b5a
+Step 1 : MAINTAINER Brian Tiger Chow <btc@perfmode.com>
+ ---> Using cache
+ ---> 0c4f44fbbdcd
+Step 2 : COPY . /go/src/github.com/jbenet/go-ipfs
+ ---> 66c1af3f247e
+Removing intermediate container d9d9a9622f99
+Step 3 : RUN cd /go/src/github.com/jbenet/go-ipfs/cmd/ipfs && go install
+ ---> Running in 993c926671fe
+ ---> 201c5cdaf8aa
+Removing intermediate container 993c926671fe
+Step 4 : EXPOSE 4001 5001 4002/udp
+ ---> Running in 66d563097a72
+ ---> f44cd7e4e050
+Removing intermediate container 66d563097a72
+Step 5 : ENTRYPOINT ipfs
+ ---> Running in c6cad1ef80ef
+ ---> 85a6d606c2f7
+Removing intermediate container c6cad1ef80ef
+Step 6 : CMD daemon --init
+ ---> Running in 3a26f0cc8cb9
+ ---> 3891d15f4919
+Removing intermediate container 3a26f0cc8cb9
+Successfully built 3891d15f4919
+docker images | grep ipfs-test-latest
+ipfs-test-latest       latest              3891d15f4919        2 seconds ago       560.2 MB
+cp Makefile ./data/filetiny # simple
+go build -o ./bin/random ../Godeps/_workspace/src/github.com/jbenet/go-random/random
+./bin/random 50000000 > ./data/filerand
+./run-test-on-img.sh ipfs-test-latest
+using docker image: 3891d15f4919 (ipfs-test-latest)
+docker tag -f 3891d15f4919 zaqwsx_ipfs-test-img
+fig build --no-cache
+ ---> 3891d15f4919
+Step 1 : RUN ipfs init -b=1024
+ ---> Running in 0939c80570d8
+initializing ipfs node at /root/.go-ipfs
+generating key pair...done
+peer identity: QmTPSTd14kvz4JnhTew9Xs6yQ8FGLBfUy6mST9BaARByiS
+
+to get started, enter: ipfs cat QmYpv2VEsxzTTXRYX3PjDg961cnJE3kY1YDXLycHGQ3zZB
+ ---> 7d948eab3ffd
+Removing intermediate container 0939c80570d8
+Step 2 : ADD . /tmp/id
+ ---> 563d42e5dc62
+Removing intermediate container bd3f90f70564
+Step 3 : RUN mv -f /tmp/id/config /root/.go-ipfs/config
+ ---> Running in e6f3787c015d
+ ---> 3a63a7dcbd4c
+Removing intermediate container e6f3787c015d
+Step 4 : RUN ipfs id
+ ---> Running in bda8fc876ad8
+{
+	"ID": "QmNXuBh8HFsWq68Fid8dMbGNQTh7eG6hV9rr1fQyfmfomE",
+	"PublicKey": "",
+	"Addresses": null,
+	"AgentVersion": "",
+	"ProtocolVersion": ""
+ ---> 89376e0d164a
+Removing intermediate container bda8fc876ad8
+Step 5 : ENV IPFS_LOGGING_FMT nocolor
+ ---> Running in c193340166ea
+ ---> 403ee7801d47
+Removing intermediate container c193340166ea
+Step 6 : EXPOSE 4011 4012/udp
+ ---> Running in ed5502ad76ea
+ ---> c3272fb627c3
+Removing intermediate container ed5502ad76ea
+Successfully built c3272fb627c3
+ ---> 8eaa4ff06b53
+Step 1 : ADD filetiny /data/filetiny
+ ---> 683414031c9d
+Removing intermediate container 36c96f135432
+Step 2 : ADD filerand /data/filerand
+ ---> 94c0cc465b0a
+Removing intermediate container 244519342d61
+Step 3 : VOLUME /data
+ ---> Running in a78f9b4743ad
+ ---> 5496bf202fb9
+Removing intermediate container a78f9b4743ad
+Successfully built 5496bf202fb9
+ ---> 3891d15f4919
+Step 1 : RUN ipfs init -b=1024
+ ---> Running in 702b5b00898d
+initializing ipfs node at /root/.go-ipfs
+generating key pair...done
+peer identity: QmZPfUMX4wNks6nGaih8zqDBaqAQonPZZqyfJoxnJtH7fy
+
+to get started, enter: ipfs cat QmYpv2VEsxzTTXRYX3PjDg961cnJE3kY1YDXLycHGQ3zZB
+ ---> 593265aeaf75
+Removing intermediate container 702b5b00898d
+Step 2 : ADD . /tmp/test
+ ---> 76a88629979f
+Removing intermediate container 5d69f6e633bf
+Step 3 : RUN mv -f /tmp/test/config /root/.go-ipfs/config
+ ---> Running in 33e5e767fcc5
+ ---> f7c999a1c0ea
+Removing intermediate container 33e5e767fcc5
+Step 4 : RUN ipfs id
+ ---> Running in b03f53781603
+{
+	"ID": "Qmbtc2C7rqmAfdeMTM7FX4YF8CeBumMCfk5Z1GBCMbMTfY",
+	"PublicKey": "",
+	"Addresses": null,
+	"AgentVersion": "",
+	"ProtocolVersion": ""
+ ---> 98518ccc56da
+Removing intermediate container b03f53781603
+Step 5 : RUN chmod +x /tmp/test/run.sh
+ ---> Running in e5f1ecd39504
+ ---> d78b3965b8dd
+Removing intermediate container e5f1ecd39504
+Step 6 : EXPOSE 4021 4022/udp
+ ---> Running in 89f9474b0a0b
+ ---> e287f5f6b164
+Removing intermediate container 89f9474b0a0b
+Step 7 : ENV IPFS_LOGGING_FMT nocolor
+ ---> Running in c88cc1eed3bf
+ ---> 33496217c90d
+Removing intermediate container c88cc1eed3bf
+Step 8 : ENTRYPOINT /bin/bash
+ ---> Running in 1cf54048ee99
+ ---> 9d1eda8f38e1
+Removing intermediate container 1cf54048ee99
+Step 9 : CMD /tmp/test/run.sh
+ ---> Running in 3f41cd96657e
+ ---> cc9bd927dee6
+Removing intermediate container 3f41cd96657e
+Successfully built cc9bd927dee6
+ ---> 3891d15f4919
+Step 1 : RUN ipfs init -b=1024
+ ---> Running in a01dfa21b2d4
+initializing ipfs node at /root/.go-ipfs
+generating key pair...done
+peer identity: QmVciCyndWowEEp8JmfPDpRbPzmcVBkgDheaNu5uqpnJ7k
+
+to get started, enter: ipfs cat QmYpv2VEsxzTTXRYX3PjDg961cnJE3kY1YDXLycHGQ3zZB
+ ---> 57b44e95ccac
+Removing intermediate container a01dfa21b2d4
+Step 2 : ADD . /tmp/id
+ ---> 4d3d875c093c
+Removing intermediate container 7920b8018198
+Step 3 : RUN mv -f /tmp/id/config /root/.go-ipfs/config
+ ---> Running in db1205e9fef6
+ ---> 6b96354a09e5
+Removing intermediate container db1205e9fef6
+Step 4 : RUN ipfs id
+ ---> Running in b5c832a41c4b
+{
+	"ID": "Qmbtc35vdjVh5o9w2AaT2SgcWwigsaoZUpRfq2FSrFD6mb",
+	"PublicKey": "",
+	"Addresses": null,
+	"AgentVersion": "",
+	"ProtocolVersion": ""
+ ---> c4cba4eec0ea
+Removing intermediate container b5c832a41c4b
+Step 5 : EXPOSE 4031 4032/udp
+ ---> Running in 876669526c92
+ ---> eca63f469503
+Removing intermediate container 876669526c92
+Step 6 : ENV IPFS_LOGGING_FMT nocolor
+ ---> Running in d649a11dbe35
+ ---> 1a3cc6da5a29
+Removing intermediate container d649a11dbe35
+Step 7 : ENTRYPOINT /bin/bash
+ ---> Running in 5f76313a3d75
+ ---> 2b487120e6b0
+Removing intermediate container 5f76313a3d75
+Step 8 : CMD /tmp/id/run.sh
+ ---> Running in 230e07c101e0
+ ---> 6a644ec9d476
+Removing intermediate container 230e07c101e0
+Successfully built 6a644ec9d476
+fig up --no-color | tee build/fig.log
+Attaching to dockertest_bootstrap_1, dockertest_data_1, dockertest_server_1, dockertest_client_1
+bootstrap_1 | 2015-01-03 15:12:03.237253 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+bootstrap_1 | 2015-01-03 15:12:03.294320 DEBUG cmd/ipfs prefixlog.go:107: config path is /root/.go-ipfs
+bootstrap_1 | 2015-01-03 15:12:03.295493 INFO cmd/ipfs prefixlog.go:116: looking for running daemon...
+bootstrap_1 | 2015-01-03 15:12:03.295815 DEBUG cmd/ipfs prefixlog.go:107: Calling pre-command hooks...
+bootstrap_1 | 2015-01-03 15:12:03.295912 DEBUG cmd/ipfs prefixlog.go:107: Calling hook: Configure Event Logger
+bootstrap_1 | 2015-01-03 15:12:03.296327 INFO cmd/ipfs prefixlog.go:116: Executing command locally
+bootstrap_1 | daemon listening on /ip4/127.0.0.1/tcp/5001
+bootstrap_1 | 2015-01-03 15:12:03.390047 INFO conn prefixlog.go:116: swarm listening on /ip6/::/tcp/4011
+bootstrap_1 | 2015-01-03 15:12:03.391147 INFO conn prefixlog.go:116: swarm listening on /ip6/::/udp/4012/utp
+bootstrap_1 | 2015-01-03 15:12:03.391391 DEBUG net/mux prefixlog.go:107: <Muxer 0xc208215870 0> setting handler for protocol: /ipfs/identify (14)
+bootstrap_1 | 2015-01-03 15:12:03.391450 DEBUG net/mux prefixlog.go:107: <Muxer 0xc208215870 1> setting handler for protocol: /ipfs/relay (11)
+bootstrap_1 | 2015-01-03 15:12:03.391868 DEBUG swarm2 prefixlog.go:107: InterfaceListenAddresses: [/ip4/172.17.2.16/tcp/4011 /ip6/fe80::42:acff:fe11:210/tcp/4011 /ip4/172.17.2.16/udp/4012/utp /ip6/fe80::42:acff:fe11:210/udp/4012/utp]
+bootstrap_1 | 2015-01-03 15:12:03.391929 DEBUG net/mux prefixlog.go:107: <Muxer 0xc208215870 2> setting handler for protocol: /ipfs/diagnostics (17)
+bootstrap_1 | 2015-01-03 15:12:03.392038 DEBUG net/mux prefixlog.go:107: <Muxer 0xc208215870 3> setting handler for protocol: /ipfs/dht (9)
+bootstrap_1 | 2015-01-03 15:12:03.392113 DEBUG net/mux prefixlog.go:107: <Muxer 0xc208215870 4> setting handler for protocol: /ipfs/bitswap (13)
+bootstrap_1 | 2015-01-03 15:12:03.392459 DEBUG core prefixlog.go:107: <peer.ID QmNXuB> bootstrapping to 4 more nodes
+bootstrap_1 | 2015-01-03 15:12:03.392566 ERROR core prefixlog.go:110: <peer.ID QmNXuB> bootstrap error: must bootstrap to 4 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:12:03.392602 ERROR core prefixlog.go:110: must bootstrap to 4 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:12:07.413601 DEBUG conn prefixlog.go:107: newSingleConn 0xc20823a080: <peer.ID QmNXuB> to <peer.ID >
+bootstrap_1 | 2015-01-03 15:12:07.413783 DEBUG secio prefixlog.go:107: handshake: <peer.ID QmNXuB> <--start--> <peer.ID >
+bootstrap_1 | 2015-01-03 15:12:07.415658 DEBUG secio prefixlog.go:107: 1.1 Identify: <peer.ID QmNXuB> Remote Peer Identified as <peer.ID Qmbtc2>
+bootstrap_1 | 2015-01-03 15:12:07.428326 DEBUG secio prefixlog.go:107: handshake: <peer.ID QmNXuB> <--finish--> <peer.ID Qmbtc2>
+bootstrap_1 | 2015-01-03 15:12:07.428688 DEBUG conn prefixlog.go:107: newSecureConn: <peer.ID QmNXuB> to <peer.ID Qmbtc2> handshake success!
+bootstrap_1 | 2015-01-03 15:12:07.437909 DEBUG net/identify prefixlog.go:107: <peer.ID QmNXuB> received listen addrs for <peer.ID Qmbtc2>: [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp]
+bootstrap_1 | 2015-01-03 15:12:07.438116 DEBUG net/identify prefixlog.go:107: /ipfs/identify received message from <peer.ID Qmbtc2> /ip4/172.17.2.18/tcp/53722
+bootstrap_1 | 2015-01-03 15:12:07.438461 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/identify
+bootstrap_1 | 2015-01-03 15:12:07.442161 DEBUG swarm2 prefixlog.go:107: InterfaceListenAddresses: [/ip4/172.17.2.16/tcp/4011 /ip6/fe80::42:acff:fe11:210/tcp/4011 /ip4/172.17.2.16/udp/4012/utp /ip6/fe80::42:acff:fe11:210/udp/4012/utp]
+bootstrap_1 | 2015-01-03 15:12:07.443158 DEBUG net/identify prefixlog.go:107: <peer.ID QmNXuB> sent listen addrs to <peer.ID Qmbtc2>: [/ip4/172.17.2.16/tcp/4011 /ip6/fe80::42:acff:fe11:210/tcp/4011 /ip4/172.17.2.16/udp/4012/utp /ip6/fe80::42:acff:fe11:210/udp/4012/utp]
+bootstrap_1 | 2015-01-03 15:12:07.444241 DEBUG net/identify prefixlog.go:107: /ipfs/identify sent message to <peer.ID Qmbtc2> /ip4/172.17.2.18/tcp/53722
+bootstrap_1 | 2015-01-03 15:12:07.450473 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 15:12:07.451211 DEBUG dht prefixlog.go:107: <peer.ID QmNXuB> Responding to ping from <peer.ID Qmbtc2>!
+client_1    | 2015-01-03 15:12:07.562785 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+client_1    | 2015-01-03 15:12:07.637461 DEBUG cmd/ipfs prefixlog.go:107: config path is /root/.go-ipfs
+client_1    | 2015-01-03 15:12:07.638535 INFO cmd/ipfs prefixlog.go:116: looking for running daemon...
+client_1    | 2015-01-03 15:12:07.638786 DEBUG cmd/ipfs prefixlog.go:107: Calling pre-command hooks...
+client_1    | 2015-01-03 15:12:07.638836 DEBUG cmd/ipfs prefixlog.go:107: Calling hook: Check for updates
+client_1    | 2015-01-03 15:12:07.639040 INFO updates updates.go:207: checking for update
+server_1    | 2015-01-03 15:12:06.219763 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+server_1    | 2015-01-03 15:12:06.274535 DEBUG cmd/ipfs prefixlog.go:107: config path is /root/.go-ipfs
+server_1    | 2015-01-03 15:12:06.275503 INFO cmd/ipfs prefixlog.go:116: looking for running daemon...
+server_1    | 2015-01-03 15:12:06.275934 DEBUG cmd/ipfs prefixlog.go:107: Calling pre-command hooks...
+server_1    | 2015-01-03 15:12:06.275980 DEBUG cmd/ipfs prefixlog.go:107: Calling hook: Check for updates
+server_1    | 2015-01-03 15:12:06.276205 INFO updates updates.go:207: checking for update
+server_1    | 2015-01-03 15:12:07.267044 NOTICE updates updates.go:211: No update available, checked on 2015-01-03 15:12:07.26703888 +0000 UTC
+server_1    | 2015-01-03 15:12:07.267235 DEBUG cmd/ipfs prefixlog.go:107: Calling hook: Configure Event Logger
+server_1    | 2015-01-03 15:12:07.267286 INFO cmd/ipfs prefixlog.go:116: Executing command locally
+server_1    | added /ip4/172.17.2.16/tcp/4011/QmNXuBh8HFsWq68Fid8dMbGNQTh7eG6hV9rr1fQyfmfomE
+server_1    | dockertest> starting server daemon
+server_1    | 2015-01-03 15:12:07.288486 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+server_1    | 2015-01-03 15:12:07.336442 DEBUG cmd/ipfs prefixlog.go:107: config path is /root/.go-ipfs
+server_1    | 2015-01-03 15:12:07.338100 INFO cmd/ipfs prefixlog.go:116: looking for running daemon...
+server_1    | 2015-01-03 15:12:07.338258 DEBUG cmd/ipfs prefixlog.go:107: Calling pre-command hooks...
+server_1    | 2015-01-03 15:12:07.338330 DEBUG cmd/ipfs prefixlog.go:107: Calling hook: Configure Event Logger
+server_1    | 2015-01-03 15:12:07.338667 INFO cmd/ipfs prefixlog.go:116: Executing command locally
+server_1    | 2015-01-03 15:12:07.403828 INFO conn prefixlog.go:116: swarm listening on /ip6/::/tcp/4021
+server_1    | 2015-01-03 15:12:07.404817 INFO conn prefixlog.go:116: swarm listening on /ip6/::/udp/4022/utp
+server_1    | 2015-01-03 15:12:07.405786 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081f8ec0 0> setting handler for protocol: /ipfs/identify (14)
+server_1    | 2015-01-03 15:12:07.406031 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081f8ec0 1> setting handler for protocol: /ipfs/relay (11)
+server_1    | 2015-01-03 15:12:07.406453 DEBUG swarm2 prefixlog.go:107: InterfaceListenAddresses: [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp]
+server_1    | 2015-01-03 15:12:07.406538 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081f8ec0 2> setting handler for protocol: /ipfs/diagnostics (17)
+server_1    | 2015-01-03 15:12:07.406644 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081f8ec0 3> setting handler for protocol: /ipfs/dht (9)
+server_1    | 2015-01-03 15:12:07.406724 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081f8ec0 4> setting handler for protocol: /ipfs/bitswap (13)
+server_1    | daemon listening on /ip4/127.0.0.1/tcp/5001
+server_1    | 2015-01-03 15:12:07.409327 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 4 more nodes
+server_1    | 2015-01-03 15:12:07.409750 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 4 nodes: [{<peer.ID QmNXuB> [/ip4/172.17.2.16/tcp/4011]}]
+server_1    | 2015-01-03 15:12:07.410947 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:07.411126 DEBUG p2p/host/basic prefixlog.go:107: host %!s(func() peer.ID=0x657e80) dialing <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:07.411440 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network dialing peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 15:12:07.411611 DEBUG conn prefixlog.go:107: <peer.ID Qmbtc2> dialing <peer.ID QmNXuB> /ip4/172.17.2.16/tcp/4011
+server_1    | 2015-01-03 15:12:07.412484 DEBUG conn prefixlog.go:107: newSingleConn 0xc20804dc80: <peer.ID Qmbtc2> to <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:07.413045 DEBUG secio prefixlog.go:107: handshake: <peer.ID Qmbtc2> <--start--> <peer.ID >
+server_1    | 2015-01-03 15:12:07.415326 DEBUG secio prefixlog.go:107: 1.1 Identify: <peer.ID Qmbtc2> Remote Peer Identified as <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:07.428319 DEBUG secio prefixlog.go:107: handshake: <peer.ID Qmbtc2> <--finish--> <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:07.433798 DEBUG conn prefixlog.go:107: newSecureConn: <peer.ID Qmbtc2> to <peer.ID QmNXuB> handshake success!
+server_1    | 2015-01-03 15:12:07.434633 DEBUG swarm2 prefixlog.go:107: network for <peer.ID Qmbtc2> finished dialing <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:07.434956 DEBUG net/identify prefixlog.go:107: IdentifyConn called twice on: <SwarmConn <peer.ID Qmbtc2> (/ip4/172.17.2.18/tcp/53722) <-- secureConn 0xc2082bc1b0 --> (/ip4/172.17.2.16/tcp/4011) <peer.ID QmNXuB>>
+server_1    | 2015-01-03 15:12:07.435527 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/identify
+server_1    | 2015-01-03 15:12:07.436328 DEBUG swarm2 prefixlog.go:107: InterfaceListenAddresses: [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp]
+server_1    | 2015-01-03 15:12:07.436662 DEBUG net/identify prefixlog.go:107: <peer.ID Qmbtc2> sent listen addrs to <peer.ID QmNXuB>: [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp]
+server_1    | 2015-01-03 15:12:07.436959 DEBUG net/identify prefixlog.go:107: /ipfs/identify sent message to <peer.ID QmNXuB> /ip4/172.17.2.16/tcp/4011
+server_1    | 2015-01-03 15:12:07.444649 DEBUG net/identify prefixlog.go:107: <peer.ID Qmbtc2> received listen addrs for <peer.ID QmNXuB>: [/ip4/172.17.2.16/tcp/4011 /ip6/fe80::42:acff:fe11:210/tcp/4011 /ip4/172.17.2.16/udp/4012/utp /ip6/fe80::42:acff:fe11:210/udp/4012/utp]
+server_1    | 2015-01-03 15:12:07.445001 DEBUG net/identify prefixlog.go:107: /ipfs/identify received message from <peer.ID QmNXuB> /ip4/172.17.2.16/tcp/4011
+server_1    | 2015-01-03 15:12:07.445464 DEBUG p2p/host/basic prefixlog.go:107: host %!s(func() peer.ID=0x657e80) finished dialing <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:07.445550 DEBUG dht prefixlog.go:107: ping <peer.ID QmNXuB> start
+server_1    | 2015-01-03 15:12:07.445688 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 15:12:07.445828 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 15:12:07.446210 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 15:12:07.452824 DEBUG dht prefixlog.go:107: ping <peer.ID QmNXuB> end (err = %!s(<nil>))
+server_1    | 2015-01-03 15:12:07.455236 INFO core prefixlog.go:116: bootstrapped with <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:09.323505 NOTICE updates updates.go:211: No update available, checked on 2015-01-03 15:12:09.323493884 +0000 UTC
+client_1    | 2015-01-03 15:12:09.324395 DEBUG cmd/ipfs prefixlog.go:107: Calling hook: Configure Event Logger
+client_1    | 2015-01-03 15:12:09.324465 INFO cmd/ipfs prefixlog.go:116: Executing command locally
+client_1    | added /ip4/172.17.2.16/tcp/4011/QmNXuBh8HFsWq68Fid8dMbGNQTh7eG6hV9rr1fQyfmfomE
+client_1    | dockertest> starting client daemon
+client_1    | 2015-01-03 15:12:09.338418 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+client_1    | 2015-01-03 15:12:09.375917 DEBUG cmd/ipfs prefixlog.go:107: config path is /root/.go-ipfs
+client_1    | 2015-01-03 15:12:09.377123 INFO cmd/ipfs prefixlog.go:116: looking for running daemon...
+client_1    | 2015-01-03 15:12:09.377260 DEBUG cmd/ipfs prefixlog.go:107: Calling pre-command hooks...
+client_1    | 2015-01-03 15:12:09.378550 DEBUG cmd/ipfs prefixlog.go:107: Calling hook: Configure Event Logger
+client_1    | 2015-01-03 15:12:09.378878 INFO cmd/ipfs prefixlog.go:116: Executing command locally
+client_1    | 2015-01-03 15:12:09.431829 INFO conn prefixlog.go:116: swarm listening on /ip6/::/tcp/4031
+client_1    | 2015-01-03 15:12:09.432523 INFO conn prefixlog.go:116: swarm listening on /ip6/::/udp/4032/utp
+client_1    | 2015-01-03 15:12:09.432717 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081fd230 0> setting handler for protocol: /ipfs/identify (14)
+client_1    | 2015-01-03 15:12:09.432761 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081fd230 1> setting handler for protocol: /ipfs/relay (11)
+client_1    | 2015-01-03 15:12:09.434685 DEBUG swarm2 prefixlog.go:107: InterfaceListenAddresses: [/ip4/172.17.2.19/tcp/4031 /ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp]
+client_1    | 2015-01-03 15:12:09.434806 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081fd230 2> setting handler for protocol: /ipfs/diagnostics (17)
+client_1    | 2015-01-03 15:12:09.435297 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081fd230 3> setting handler for protocol: /ipfs/dht (9)
+client_1    | 2015-01-03 15:12:09.435407 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081fd230 4> setting handler for protocol: /ipfs/bitswap (13)
+client_1    | 2015-01-03 15:12:09.436618 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 4 more nodes
+client_1    | daemon listening on /ip4/127.0.0.1/tcp/5001
+client_1    | 2015-01-03 15:12:09.436953 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 4 nodes: [{<peer.ID QmNXuB> [/ip4/172.17.2.16/tcp/4011]}]
+client_1    | 2015-01-03 15:12:09.440305 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:09.440428 DEBUG p2p/host/basic prefixlog.go:107: host %!s(func() peer.ID=0x657e80) dialing <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:09.440649 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc3>] network dialing peer [<peer.ID QmNXuB>]
+client_1    | 2015-01-03 15:12:09.440741 DEBUG conn prefixlog.go:107: <peer.ID Qmbtc3> dialing <peer.ID QmNXuB> /ip4/172.17.2.16/tcp/4011
+bootstrap_1 | 2015-01-03 15:12:09.441472 DEBUG conn prefixlog.go:107: newSingleConn 0xc208298500: <peer.ID QmNXuB> to <peer.ID >
+bootstrap_1 | 2015-01-03 15:12:09.442565 DEBUG secio prefixlog.go:107: handshake: <peer.ID QmNXuB> <--start--> <peer.ID >
+client_1    | 2015-01-03 15:12:09.443484 DEBUG conn prefixlog.go:107: newSingleConn 0xc208201500: <peer.ID Qmbtc3> to <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:09.443779 DEBUG secio prefixlog.go:107: handshake: <peer.ID Qmbtc3> <--start--> <peer.ID >
+client_1    | 2015-01-03 15:12:09.448608 DEBUG secio prefixlog.go:107: 1.1 Identify: <peer.ID Qmbtc3> Remote Peer Identified as <peer.ID QmNXuB>
+bootstrap_1 | 2015-01-03 15:12:09.449579 DEBUG secio prefixlog.go:107: 1.1 Identify: <peer.ID QmNXuB> Remote Peer Identified as <peer.ID Qmbtc3>
+client_1    | 2015-01-03 15:12:09.464628 DEBUG secio prefixlog.go:107: handshake: <peer.ID Qmbtc3> <--finish--> <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:09.464963 DEBUG conn prefixlog.go:107: newSecureConn: <peer.ID Qmbtc3> to <peer.ID QmNXuB> handshake success!
+client_1    | 2015-01-03 15:12:09.465834 DEBUG swarm2 prefixlog.go:107: network for <peer.ID Qmbtc3> finished dialing <peer.ID QmNXuB>
+bootstrap_1 | 2015-01-03 15:12:09.464370 DEBUG secio prefixlog.go:107: handshake: <peer.ID QmNXuB> <--finish--> <peer.ID Qmbtc3>
+bootstrap_1 | 2015-01-03 15:12:09.464737 DEBUG conn prefixlog.go:107: newSecureConn: <peer.ID QmNXuB> to <peer.ID Qmbtc3> handshake success!
+client_1    | 2015-01-03 15:12:09.466325 DEBUG net/identify prefixlog.go:107: IdentifyConn called twice on: <SwarmConn <peer.ID Qmbtc3> (/ip4/172.17.2.19/tcp/46956) <-- secureConn 0xc2082d0480 --> (/ip4/172.17.2.16/tcp/4011) <peer.ID QmNXuB>>
+client_1    | 2015-01-03 15:12:09.467245 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/identify
+client_1    | 2015-01-03 15:12:09.468511 DEBUG swarm2 prefixlog.go:107: InterfaceListenAddresses: [/ip4/172.17.2.19/tcp/4031 /ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp]
+client_1    | 2015-01-03 15:12:09.468901 DEBUG net/identify prefixlog.go:107: <peer.ID Qmbtc3> sent listen addrs to <peer.ID QmNXuB>: [/ip4/172.17.2.19/tcp/4031 /ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp]
+client_1    | 2015-01-03 15:12:09.469607 DEBUG net/identify prefixlog.go:107: /ipfs/identify sent message to <peer.ID QmNXuB> /ip4/172.17.2.16/tcp/4011
+bootstrap_1 | 2015-01-03 15:12:09.475429 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/identify
+bootstrap_1 | 2015-01-03 15:12:09.476490 DEBUG swarm2 prefixlog.go:107: InterfaceListenAddresses: [/ip4/172.17.2.16/tcp/4011 /ip6/fe80::42:acff:fe11:210/tcp/4011 /ip4/172.17.2.16/udp/4012/utp /ip6/fe80::42:acff:fe11:210/udp/4012/utp]
+bootstrap_1 | 2015-01-03 15:12:09.475580 DEBUG net/identify prefixlog.go:107: <peer.ID QmNXuB> received listen addrs for <peer.ID Qmbtc3>: [/ip4/172.17.2.19/tcp/4031 /ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp]
+bootstrap_1 | 2015-01-03 15:12:09.477117 DEBUG net/identify prefixlog.go:107: /ipfs/identify received message from <peer.ID Qmbtc3> /ip4/172.17.2.19/tcp/46956
+client_1    | 2015-01-03 15:12:09.480445 DEBUG net/identify prefixlog.go:107: <peer.ID Qmbtc3> received listen addrs for <peer.ID QmNXuB>: [/ip4/172.17.2.16/tcp/4011 /ip6/fe80::42:acff:fe11:210/tcp/4011 /ip4/172.17.2.16/udp/4012/utp /ip6/fe80::42:acff:fe11:210/udp/4012/utp]
+bootstrap_1 | 2015-01-03 15:12:09.477096 DEBUG net/identify prefixlog.go:107: <peer.ID QmNXuB> sent listen addrs to <peer.ID Qmbtc3>: [/ip4/172.17.2.16/tcp/4011 /ip6/fe80::42:acff:fe11:210/tcp/4011 /ip4/172.17.2.16/udp/4012/utp /ip6/fe80::42:acff:fe11:210/udp/4012/utp]
+bootstrap_1 | 2015-01-03 15:12:09.480095 DEBUG net/identify prefixlog.go:107: /ipfs/identify sent message to <peer.ID Qmbtc3> /ip4/172.17.2.19/tcp/46956
+client_1    | 2015-01-03 15:12:09.480847 DEBUG net/identify prefixlog.go:107: /ipfs/identify received message from <peer.ID QmNXuB> /ip4/172.17.2.16/tcp/4011
+client_1    | 2015-01-03 15:12:09.488410 DEBUG p2p/host/basic prefixlog.go:107: host %!s(func() peer.ID=0x657e80) finished dialing <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:09.488851 DEBUG dht prefixlog.go:107: ping <peer.ID QmNXuB> start
+client_1    | 2015-01-03 15:12:09.489125 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> dht starting stream
+client_1    | 2015-01-03 15:12:09.489245 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc3>] network opening stream to peer [<peer.ID QmNXuB>]
+client_1    | 2015-01-03 15:12:09.489490 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+bootstrap_1 | 2015-01-03 15:12:09.496670 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 15:12:09.497621 DEBUG dht prefixlog.go:107: <peer.ID QmNXuB> Responding to ping from <peer.ID Qmbtc3>!
+client_1    | 2015-01-03 15:12:09.499942 DEBUG dht prefixlog.go:107: ping <peer.ID QmNXuB> end (err = %!s(<nil>))
+client_1    | 2015-01-03 15:12:09.500922 INFO core prefixlog.go:116: bootstrapped with <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.299488 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+server_1    | 2015-01-03 15:12:10.331359 DEBUG cmd/ipfs prefixlog.go:107: config path is /root/.go-ipfs
+server_1    | 2015-01-03 15:12:10.334114 INFO cmd/ipfs prefixlog.go:116: looking for running daemon...
+server_1    | 2015-01-03 15:12:10.334386 INFO cmd/ipfs prefixlog.go:116: a daemon is running...
+server_1    | 2015-01-03 15:12:10.334456 DEBUG cmd/ipfs prefixlog.go:107: Calling pre-command hooks...
+server_1    | 2015-01-03 15:12:10.334547 INFO cmd/ipfs prefixlog.go:116: a daemon is running...
+server_1    | 2015-01-03 15:12:10.334585 DEBUG cmd/ipfs prefixlog.go:107: Calling hook: Configure Event Logger
+server_1    | 2015-01-03 15:12:10.334991 INFO cmd/ipfs prefixlog.go:116: Executing command on daemon running at /ip4/127.0.0.1/tcp/5001
+server_1    | 2015-01-03 15:12:10.344519 DEBUG commands/http handler.go:43: Incoming API request: /api/v0/add?encoding=json&q=true
+server_1    | 2015-01-03 15:12:10.345725 DEBUG dht prefixlog.go:107: Run query with 1 peers.
+server_1    | 2015-01-03 15:12:10.345931 DEBUG dht prefixlog.go:107: adding peer to query: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.346015 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 15:12:10.346079 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 15:12:10.346174 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 15:12:10.346387 DEBUG dht prefixlog.go:107: spawning worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.348458 DEBUG dht prefixlog.go:107: spawned worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.348517 DEBUG dht prefixlog.go:107: running worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.348563 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 15:12:10.348593 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 15:12:10.348639 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 15:12:10.349092 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf ([/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp])
+bootstrap_1 | 2015-01-03 15:12:10.352077 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 15:12:10.352722 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 15:12:10.354402 WARNING dht prefixlog.go:125: handleFindPeer: could not find anything.
+bootstrap_1 | 2015-01-03 15:12:10.354444 DEBUG dht prefixlog.go:107: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for 'QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf'
+bootstrap_1 | 2015-01-03 15:12:10.355226 INFO dht prefixlog.go:116: received provider <peer.ID Qmbtc2> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf (addrs: [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp])
+server_1    | 2015-01-03 15:12:10.364341 DEBUG dht prefixlog.go:107: QUERY worker for: <peer.ID QmNXuB> - not found, and no closer peers.
+server_1    | 2015-01-03 15:12:10.364554 DEBUG dht prefixlog.go:107: completing worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.365269 ERROR dht prefixlog.go:110: closestPeers query run error: routing: not found
+server_1    | 2015-01-03 15:12:10.365647 INFO core/commands add.go:142: adding file: /data/filetiny
+server_1    | dockertest> added tiny file. hash is QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+server_1    | 2015-01-03 15:12:10.390390 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+server_1    | 2015-01-03 15:12:10.425085 DEBUG cmd/ipfs prefixlog.go:107: config path is /root/.go-ipfs
+server_1    | 2015-01-03 15:12:10.425793 INFO cmd/ipfs prefixlog.go:116: looking for running daemon...
+server_1    | 2015-01-03 15:12:10.425951 INFO cmd/ipfs prefixlog.go:116: a daemon is running...
+server_1    | 2015-01-03 15:12:10.426125 DEBUG cmd/ipfs prefixlog.go:107: Calling pre-command hooks...
+server_1    | 2015-01-03 15:12:10.426199 INFO cmd/ipfs prefixlog.go:116: a daemon is running...
+server_1    | 2015-01-03 15:12:10.426233 DEBUG cmd/ipfs prefixlog.go:107: Calling hook: Configure Event Logger
+server_1    | 2015-01-03 15:12:10.426789 INFO cmd/ipfs prefixlog.go:116: Executing command on daemon running at /ip4/127.0.0.1/tcp/5001
+server_1    | 2015-01-03 15:12:10.430676 DEBUG commands/http handler.go:43: Incoming API request: /api/v0/add?encoding=json&q=true
+server_1    | 2015-01-03 15:12:10.443126 DEBUG dht prefixlog.go:107: Run query with 1 peers.
+server_1    | 2015-01-03 15:12:10.443293 DEBUG dht prefixlog.go:107: adding peer to query: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.443556 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 15:12:10.443863 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 15:12:10.444535 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 15:12:10.444150 DEBUG dht prefixlog.go:107: spawning worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.445715 DEBUG dht prefixlog.go:107: spawned worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.447776 DEBUG dht prefixlog.go:107: running worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.447888 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 15:12:10.447930 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 15:12:10.447980 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+bootstrap_1 | 2015-01-03 15:12:10.453800 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+server_1    | 2015-01-03 15:12:10.454937 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmUkvCzaYhRyZ57d7eN6S22z8U1GZ5XXTVkvWrCks9gLe6 ([/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp])
+bootstrap_1 | 2015-01-03 15:12:10.454693 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 15:12:10.457183 DEBUG dht prefixlog.go:107: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for 'QmUkvCzaYhRyZ57d7eN6S22z8U1GZ5XXTVkvWrCks9gLe6'
+bootstrap_1 | 2015-01-03 15:12:10.457297 INFO dht prefixlog.go:116: received provider <peer.ID Qmbtc2> for QmUkvCzaYhRyZ57d7eN6S22z8U1GZ5XXTVkvWrCks9gLe6 (addrs: [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp])
+bootstrap_1 | 2015-01-03 15:12:10.457521 WARNING dht prefixlog.go:125: handleFindPeer: could not find anything.
+server_1    | 2015-01-03 15:12:10.462353 DEBUG dht prefixlog.go:107: QUERY worker for: <peer.ID QmNXuB> - not found, and no closer peers.
+server_1    | 2015-01-03 15:12:10.463323 DEBUG dht prefixlog.go:107: completing worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.463693 ERROR dht prefixlog.go:110: closestPeers query run error: routing: not found
+server_1    | 2015-01-03 15:12:10.475578 DEBUG dht prefixlog.go:107: Run query with 1 peers.
+server_1    | 2015-01-03 15:12:10.475840 DEBUG dht prefixlog.go:107: adding peer to query: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.476036 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 15:12:10.476291 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 15:12:10.476993 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 15:12:10.477477 DEBUG dht prefixlog.go:107: spawning worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.477664 DEBUG dht prefixlog.go:107: spawned worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.478076 DEBUG dht prefixlog.go:107: running worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.478167 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> dht starting stream
+bootstrap_1 | 2015-01-03 15:12:10.480744 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+server_1    | 2015-01-03 15:12:10.478230 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 15:12:10.478297 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+bootstrap_1 | 2015-01-03 15:12:10.481086 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 15:12:10.481533 DEBUG dht prefixlog.go:107: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for 'QmQzksKm2NLB66ryuxxuzdgqeVLGLBhEB1q9GKPbvHTBhU'
+bootstrap_1 | 2015-01-03 15:12:10.481713 INFO dht prefixlog.go:116: received provider <peer.ID Qmbtc2> for QmQzksKm2NLB66ryuxxuzdgqeVLGLBhEB1q9GKPbvHTBhU (addrs: [/ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021])
+bootstrap_1 | 2015-01-03 15:12:10.483099 WARNING dht prefixlog.go:125: handleFindPeer: could not find anything.
+server_1    | 2015-01-03 15:12:10.480445 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmQzksKm2NLB66ryuxxuzdgqeVLGLBhEB1q9GKPbvHTBhU ([/ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021])
+server_1    | 2015-01-03 15:12:10.487361 DEBUG dht prefixlog.go:107: QUERY worker for: <peer.ID QmNXuB> - not found, and no closer peers.
+server_1    | 2015-01-03 15:12:10.487803 DEBUG dht prefixlog.go:107: completing worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.489772 ERROR dht prefixlog.go:110: closestPeers query run error: routing: not found
+server_1    | 2015-01-03 15:12:10.495471 DEBUG dht prefixlog.go:107: Run query with 1 peers.
+server_1    | 2015-01-03 15:12:10.495811 DEBUG dht prefixlog.go:107: adding peer to query: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.495902 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 15:12:10.495964 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 15:12:10.496051 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 15:12:10.496255 DEBUG dht prefixlog.go:107: spawning worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.496574 DEBUG dht prefixlog.go:107: spawned worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.496782 DEBUG dht prefixlog.go:107: running worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.496846 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 15:12:10.496905 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 15:12:10.497025 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+bootstrap_1 | 2015-01-03 15:12:10.498157 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 15:12:10.499229 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 15:12:10.500192 DEBUG dht prefixlog.go:107: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for 'QmcBBgTXTDgRwYpafPZwe838fRWR7sDB5EEVuAXsihZ2Ke'
+bootstrap_1 | 2015-01-03 15:12:10.501253 INFO dht prefixlog.go:116: received provider <peer.ID Qmbtc2> for QmcBBgTXTDgRwYpafPZwe838fRWR7sDB5EEVuAXsihZ2Ke (addrs: [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp])
+server_1    | 2015-01-03 15:12:10.501322 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmcBBgTXTDgRwYpafPZwe838fRWR7sDB5EEVuAXsihZ2Ke ([/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp])
+bootstrap_1 | 2015-01-03 15:12:10.502755 DEBUG dht prefixlog.go:107: handleFindPeer: sending back '<peer.ID Qmbtc3>'
+server_1    | 2015-01-03 15:12:10.510570 DEBUG dht prefixlog.go:107: PEERS CLOSER -- worker for: <peer.ID QmNXuB> (1 closer peers)
+server_1    | 2015-01-03 15:12:10.510846 DEBUG dht prefixlog.go:107: adding peer to query: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:10.510678 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 15:12:10.510918 DEBUG dht prefixlog.go:107: PEERS CLOSER -- worker for: <peer.ID QmNXuB> added <peer.ID Qmbtc3> ([/ip6/fe80::42:acff:fe11:213/udp/4032/utp /ip4/172.17.2.19/tcp/4031 /ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp])
+server_1    | 2015-01-03 15:12:10.510960 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID Qmbtc3>]
+server_1    | 2015-01-03 15:12:10.511058 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer no connections. Attempting to connect...
+server_1    | 2015-01-03 15:12:10.511037 DEBUG dht prefixlog.go:107: completing worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:10.511099 DEBUG dht prefixlog.go:107: spawning worker for: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:10.511116 DEBUG conn prefixlog.go:107: <peer.ID Qmbtc2> dialing <peer.ID Qmbtc3> /ip6/fe80::42:acff:fe11:213/udp/4032/utp
+server_1    | 2015-01-03 15:12:10.511156 DEBUG dht prefixlog.go:107: spawned worker for: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:10.511208 DEBUG dht prefixlog.go:107: running worker for: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:10.511267 INFO dht prefixlog.go:116: worker for: <peer.ID Qmbtc3> -- not connected. dial start
+server_1    | 2015-01-03 15:12:10.511320 DEBUG p2p/host/basic prefixlog.go:107: host %!s(func() peer.ID=0x657e80) dialing <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:10.511434 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network dialing peer [<peer.ID Qmbtc3>]
+server_1    | 2015-01-03 15:12:10.511541 DEBUG conn prefixlog.go:107: <peer.ID Qmbtc2> dialing <peer.ID Qmbtc3> /ip4/172.17.2.19/tcp/4031
+server_1    | 2015-01-03 15:12:10.514028 DEBUG conn prefixlog.go:107: newSingleConn 0xc20825f000: <peer.ID Qmbtc2> to <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:10.514222 DEBUG secio prefixlog.go:107: handshake: <peer.ID Qmbtc2> <--start--> <peer.ID >
+client_1    | 2015-01-03 15:12:10.513643 DEBUG conn prefixlog.go:107: newSingleConn 0xc208249200: <peer.ID Qmbtc3> to <peer.ID >
+client_1    | 2015-01-03 15:12:10.518886 DEBUG secio prefixlog.go:107: handshake: <peer.ID Qmbtc3> <--start--> <peer.ID >
+client_1    | 2015-01-03 15:12:10.519481 DEBUG conn prefixlog.go:107: newSingleConn 0xc20832a0c0: <peer.ID Qmbtc3> to <peer.ID >
+client_1    | 2015-01-03 15:12:10.519832 DEBUG secio prefixlog.go:107: 1.1 Identify: <peer.ID Qmbtc3> Remote Peer Identified as <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:10.519955 DEBUG secio prefixlog.go:107: handshake: <peer.ID Qmbtc3> <--start--> <peer.ID >
+server_1    | 2015-01-03 15:12:10.526809 DEBUG secio prefixlog.go:107: 1.1 Identify: <peer.ID Qmbtc2> Remote Peer Identified as <peer.ID Qmbtc3>
+client_1    | 2015-01-03 15:12:10.545305 DEBUG secio prefixlog.go:107: handshake: <peer.ID Qmbtc3> <--finish--> <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:10.546203 DEBUG conn prefixlog.go:107: newSecureConn: <peer.ID Qmbtc3> to <peer.ID Qmbtc2> handshake success!
+server_1    | 2015-01-03 15:12:10.545666 DEBUG secio prefixlog.go:107: handshake: <peer.ID Qmbtc2> <--finish--> <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:10.545950 DEBUG conn prefixlog.go:107: newSecureConn: <peer.ID Qmbtc2> to <peer.ID Qmbtc3> handshake success!
+server_1    | 2015-01-03 15:12:10.546471 DEBUG swarm2 prefixlog.go:107: network for <peer.ID Qmbtc2> finished dialing <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:10.546996 DEBUG net/identify prefixlog.go:107: IdentifyConn called twice on: <SwarmConn <peer.ID Qmbtc2> (/ip4/172.17.2.18/tcp/40876) <-- secureConn 0xc20896e7b0 --> (/ip4/172.17.2.19/tcp/4031) <peer.ID Qmbtc3>>
+server_1    | 2015-01-03 15:12:10.548130 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/identify
+client_1    | 2015-01-03 15:12:10.548169 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/identify
+client_1    | 2015-01-03 15:12:10.549853 DEBUG swarm2 prefixlog.go:107: InterfaceListenAddresses: [/ip4/172.17.2.19/tcp/4031 /ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp]
+client_1    | 2015-01-03 15:12:10.551181 DEBUG net/identify prefixlog.go:107: <peer.ID Qmbtc3> sent listen addrs to <peer.ID Qmbtc2>: [/ip4/172.17.2.19/tcp/4031 /ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp]
+client_1    | 2015-01-03 15:12:10.551452 DEBUG net/identify prefixlog.go:107: <peer.ID Qmbtc3> received listen addrs for <peer.ID Qmbtc2>: [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp]
+client_1    | 2015-01-03 15:12:10.551660 DEBUG net/identify prefixlog.go:107: /ipfs/identify received message from <peer.ID Qmbtc2> /ip4/172.17.2.18/tcp/40876
+server_1    | 2015-01-03 15:12:10.548803 DEBUG swarm2 prefixlog.go:107: InterfaceListenAddresses: [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp]
+server_1    | 2015-01-03 15:12:10.548927 DEBUG net/identify prefixlog.go:107: <peer.ID Qmbtc2> sent listen addrs to <peer.ID Qmbtc3>: [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp]
+server_1    | 2015-01-03 15:12:10.549761 DEBUG net/identify prefixlog.go:107: /ipfs/identify sent message to <peer.ID Qmbtc3> /ip4/172.17.2.19/tcp/4031
+server_1    | 2015-01-03 15:12:10.553067 DEBUG net/identify prefixlog.go:107: <peer.ID Qmbtc2> received listen addrs for <peer.ID Qmbtc3>: [/ip4/172.17.2.19/tcp/4031 /ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp]
+server_1    | 2015-01-03 15:12:10.553275 DEBUG net/identify prefixlog.go:107: /ipfs/identify received message from <peer.ID Qmbtc3> /ip4/172.17.2.19/tcp/4031
+server_1    | 2015-01-03 15:12:10.553495 DEBUG p2p/host/basic prefixlog.go:107: host %!s(func() peer.ID=0x657e80) finished dialing <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:10.553566 INFO dht prefixlog.go:116: worker for: <peer.ID Qmbtc3> -- not connected. dial success!
+server_1    | 2015-01-03 15:12:10.553632 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 15:12:10.554504 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID Qmbtc3>]
+server_1    | 2015-01-03 15:12:10.554666 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+client_1    | 2015-01-03 15:12:10.552547 DEBUG net/identify prefixlog.go:107: /ipfs/identify sent message to <peer.ID Qmbtc2> /ip4/172.17.2.18/tcp/40876
+client_1    | 2015-01-03 15:12:10.558277 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+client_1    | 2015-01-03 15:12:10.559897 WARNING dht prefixlog.go:125: handleFindPeer: could not find anything.
+server_1    | 2015-01-03 15:12:10.566594 DEBUG dht prefixlog.go:107: QUERY worker for: <peer.ID Qmbtc3> - not found, and no closer peers.
+server_1    | 2015-01-03 15:12:10.566785 DEBUG dht prefixlog.go:107: completing worker for: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:10.566915 ERROR dht prefixlog.go:110: closestPeers query run error: routing: not found
+client_1    | dockertest> client found file with hash: QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+client_1    | 2015-01-03 15:12:12.355745 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+client_1    | 2015-01-03 15:12:12.386916 DEBUG cmd/ipfs prefixlog.go:107: config path is /root/.go-ipfs
+client_1    | 2015-01-03 15:12:12.388196 INFO cmd/ipfs prefixlog.go:116: looking for running daemon...
+client_1    | 2015-01-03 15:12:12.388502 INFO cmd/ipfs prefixlog.go:116: a daemon is running...
+client_1    | 2015-01-03 15:12:12.388702 DEBUG cmd/ipfs prefixlog.go:107: Calling pre-command hooks...
+client_1    | 2015-01-03 15:12:12.389988 INFO cmd/ipfs prefixlog.go:116: a daemon is running...
+client_1    | 2015-01-03 15:12:12.390030 DEBUG cmd/ipfs prefixlog.go:107: Calling hook: Configure Event Logger
+client_1    | 2015-01-03 15:12:12.390354 INFO cmd/ipfs prefixlog.go:116: Executing command on daemon running at /ip4/127.0.0.1/tcp/5001
+client_1    | 2015-01-03 15:12:12.401565 DEBUG commands/http handler.go:43: Incoming API request: /api/v0/cat?arg=QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf&encoding=json
+client_1    | 2015-01-03 15:12:12.401720 DEBUG path path.go:26: Resolve: 'QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf'
+client_1    | 2015-01-03 15:12:12.401865 DEBUG path path.go:48: Resolve dag get.
+client_1    | 2015-01-03 15:12:12.401938 DEBUG blockservice blockservice.go:65: BlockService GetBlock: 'QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf'
+client_1    | 2015-01-03 15:12:12.402139 DEBUG blockservice blockservice.go:72: Blockservice: Searching bitswap.
+client_1    | 2015-01-03 15:12:12.402430 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).GetBlock(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf) GetBlockRequestBegin
+client_1    | 2015-01-03 15:12:12.404855 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistMsgToPeers(1) begin
+client_1    | 2015-01-03 15:12:12.406503 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> FindProviders QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+client_1    | 2015-01-03 15:12:12.406764 DEBUG dht prefixlog.go:107: Run query with 2 peers.
+client_1    | 2015-01-03 15:12:12.406807 DEBUG dht prefixlog.go:107: adding peer to query: <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:12.406887 DEBUG dht prefixlog.go:107: adding peer to query: <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.406983 DEBUG dht prefixlog.go:107: spawning worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:12.407064 DEBUG dht prefixlog.go:107: spawned worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:12.407193 DEBUG dht prefixlog.go:107: running worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:12.407365 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  begin
+client_1    | 2015-01-03 15:12:12.407405 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> dht starting stream
+client_1    | 2015-01-03 15:12:12.407452 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc3>] network opening stream to peer [<peer.ID QmNXuB>]
+client_1    | 2015-01-03 15:12:12.407566 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+client_1    | 2015-01-03 15:12:12.407598 DEBUG dht prefixlog.go:107: spawning worker for: <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.408471 DEBUG dht prefixlog.go:107: spawned worker for: <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.408586 DEBUG dht prefixlog.go:107: running worker for: <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.408700 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID Qmbtc2>):  begin
+client_1    | 2015-01-03 15:12:12.408725 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> dht starting stream
+client_1    | 2015-01-03 15:12:12.408778 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc3>] network opening stream to peer [<peer.ID Qmbtc2>]
+client_1    | 2015-01-03 15:12:12.408901 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 15:12:12.416915 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 15:12:12.420463 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 15:12:12.420998 DEBUG dht prefixlog.go:107: <peer.ID QmNXuB> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  begin
+bootstrap_1 | 2015-01-03 15:12:12.421323 DEBUG dht prefixlog.go:107: <peer.ID QmNXuB> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  have 1 providers: [{<peer.ID Qmbtc2> [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp]}]
+bootstrap_1 | 2015-01-03 15:12:12.421784 DEBUG dht prefixlog.go:107: <peer.ID QmNXuB> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  end
+server_1    | 2015-01-03 15:12:12.425548 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  begin
+server_1    | 2015-01-03 15:12:12.425924 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  have the value. added self as provider
+server_1    | 2015-01-03 15:12:12.426062 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  have 2 providers: [{<peer.ID Qmbtc2> [/ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp]} {<peer.ID Qmbtc2> [/ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021]}]
+server_1    | 2015-01-03 15:12:12.426696 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  have 1 closer peers: [{<peer.ID Qmbtc2> [/ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021]} {<peer.ID Qmbtc2> [/ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021]}]
+server_1    | 2015-01-03 15:12:12.426986 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  end
+client_1    | 2015-01-03 15:12:12.428358 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got 1 provider entries
+client_1    | 2015-01-03 15:12:12.428473 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got 1 provider entries decoded
+client_1    | 2015-01-03 15:12:12.428501 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got provider: {<peer.ID Qmbtc2> [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp]}
+client_1    | 2015-01-03 15:12:12.428764 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  using provider: {<peer.ID Qmbtc2> [/ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp]}
+client_1    | 2015-01-03 15:12:12.428847 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got closer peers: []
+client_1    | 2015-01-03 15:12:12.428872 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  end
+client_1    | 2015-01-03 15:12:12.428904 DEBUG dht prefixlog.go:107: QUERY worker for: <peer.ID QmNXuB> - not found, and no closer peers.
+client_1    | 2015-01-03 15:12:12.428954 DEBUG dht prefixlog.go:107: completing worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:12.429144 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistMsgToPeers(1) <peer.ID Qmbtc2> sending
+client_1    | 2015-01-03 15:12:12.429251 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).bitswap.sendWantlistMsgToPeer(1, <peer.ID Qmbtc2>) sending wantlist
+client_1    | 2015-01-03 15:12:12.429505 DEBUG bitswap_network ipfs_impl.go:44: bitswap net SendMessage to <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.429587 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc3>] network opening stream to peer [<peer.ID Qmbtc2>]
+client_1    | 2015-01-03 15:12:12.429678 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+client_1    | 2015-01-03 15:12:12.432152 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).bitswap.sendWantlistMsgToPeer(1, <peer.ID Qmbtc2>) send wantlist success
+server_1    | 2015-01-03 15:12:12.432859 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/bitswap
+server_1    | 2015-01-03 15:12:12.434813 DEBUG bitswap_network ipfs_impl.go:116: bitswap net handleNewStream from <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:12.435261 DEBUG bitswap prefixlog.go:107: ReceiveMessage from <peer.ID Qmbtc3>
+client_1    | 2015-01-03 15:12:12.432852 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID Qmbtc2>):  got 2 provider entries
+client_1    | 2015-01-03 15:12:12.434647 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID Qmbtc2>):  got 2 provider entries decoded
+client_1    | 2015-01-03 15:12:12.434717 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID Qmbtc2>):  got provider: {<peer.ID Qmbtc2> [/ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp]}
+client_1    | 2015-01-03 15:12:12.434954 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID Qmbtc2>):  got provider: {<peer.ID Qmbtc2> [/ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021]}
+client_1    | 2015-01-03 15:12:12.435104 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID Qmbtc2>):  got closer peers: [{<peer.ID Qmbtc2> [/ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021]} {<peer.ID Qmbtc2> [/ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021]}]
+client_1    | 2015-01-03 15:12:12.435258 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID Qmbtc2>):  end
+client_1    | 2015-01-03 15:12:12.435285 DEBUG dht prefixlog.go:107: PEERS CLOSER -- worker for: <peer.ID Qmbtc2> (2 closer peers)
+client_1    | 2015-01-03 15:12:12.435359 DEBUG dht prefixlog.go:107: query peer was already seen
+client_1    | 2015-01-03 15:12:12.435386 DEBUG dht prefixlog.go:107: PEERS CLOSER -- worker for: <peer.ID Qmbtc2> added <peer.ID Qmbtc2> ([/ip6/fe80::42:acff:fe11:212/tcp/4021 /ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021])
+client_1    | 2015-01-03 15:12:12.435507 DEBUG dht prefixlog.go:107: query peer was already seen
+client_1    | 2015-01-03 15:12:12.436260 DEBUG dht prefixlog.go:107: PEERS CLOSER -- worker for: <peer.ID Qmbtc2> added <peer.ID Qmbtc2> ([/ip4/172.17.2.18/udp/4022/utp /ip6/fe80::42:acff:fe11:212/udp/4022/utp /ip4/172.17.2.18/tcp/4021 /ip6/fe80::42:acff:fe11:212/tcp/4021])
+client_1    | 2015-01-03 15:12:12.436642 DEBUG dht prefixlog.go:107: completing worker for: <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.436844 ERROR dht prefixlog.go:110: FindProviders Query error: routing: not found
+client_1    | 2015-01-03 15:12:12.437053 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistMsgToPeers(1) end
+server_1    | 2015-01-03 15:12:12.435497 DEBUG bitswap prefixlog.go:107: engine.MessageReceived <peer.ID Qmbtc3> start
+server_1    | 2015-01-03 15:12:12.437277 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) enter
+server_1    | 2015-01-03 15:12:12.437633 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) wants QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf 2147483647
+server_1    | 2015-01-03 15:12:12.437756 DEBUG engine prefixlog.go:107: peer <peer.ID Qmbtc3> wants QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+server_1    | 2015-01-03 15:12:12.437879 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) exit
+server_1    | 2015-01-03 15:12:12.437954 DEBUG bitswap prefixlog.go:107: engine.MessageReceived <peer.ID Qmbtc3> done
+server_1    | 2015-01-03 15:12:12.438036 DEBUG engine prefixlog.go:107: bitswap.Engine.taskWorker woken up
+server_1    | 2015-01-03 15:12:12.438068 DEBUG engine prefixlog.go:107: bitswap.Engine.taskWorker <Task <peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf, false> processing
+server_1    | 2015-01-03 15:12:12.438214 DEBUG engine prefixlog.go:107: bitswap.Engine.taskWorker <Task <peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf, false> sending...
+server_1    | 2015-01-03 15:12:12.438315 DEBUG engine prefixlog.go:107: bitswap.Engine.taskWorker <Task <peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf, false> sent
+server_1    | 2015-01-03 15:12:12.439056 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc2>).taskWorker message to <peer.ID Qmbtc3> sending...
+server_1    | 2015-01-03 15:12:12.439370 DEBUG bitswap_network ipfs_impl.go:44: bitswap net SendMessage to <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:12.439496 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID Qmbtc3>]
+server_1    | 2015-01-03 15:12:12.439635 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 15:12:12.442130 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc2>).taskWorker message to <peer.ID Qmbtc3> sent
+client_1    | 2015-01-03 15:12:12.444196 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/bitswap
+client_1    | 2015-01-03 15:12:12.446182 DEBUG bitswap_network ipfs_impl.go:116: bitswap net handleNewStream from <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.446678 DEBUG bitswap prefixlog.go:107: ReceiveMessage from <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.446755 DEBUG bitswap prefixlog.go:107: engine.MessageReceived <peer.ID Qmbtc2> start
+client_1    | 2015-01-03 15:12:12.446870 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc2>) enter
+client_1    | 2015-01-03 15:12:12.446948 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc2>) got block %s %d bytes QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf 760
+client_1    | 2015-01-03 15:12:12.447050 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc2>) exit
+client_1    | 2015-01-03 15:12:12.447088 DEBUG bitswap prefixlog.go:107: engine.MessageReceived <peer.ID Qmbtc2> done
+client_1    | 2015-01-03 15:12:12.447373 DEBUG dht prefixlog.go:107: Run query with 2 peers.
+client_1    | 2015-01-03 15:12:12.447404 DEBUG dht prefixlog.go:107: adding peer to query: <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:12.447487 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> dht starting stream
+client_1    | 2015-01-03 15:12:12.447526 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc3>] network opening stream to peer [<peer.ID QmNXuB>]
+client_1    | 2015-01-03 15:12:12.447608 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+client_1    | 2015-01-03 15:12:12.447855 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> dht starting stream
+client_1    | 2015-01-03 15:12:12.447945 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc3>] network opening stream to peer [<peer.ID Qmbtc2>]
+client_1    | 2015-01-03 15:12:12.448013 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+client_1    | 2015-01-03 15:12:12.450277 DEBUG dht prefixlog.go:107: adding peer to query: <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.450310 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).GetBlock(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf) GetBlockRequestEnd
+client_1    | 2015-01-03 15:12:12.450371 DEBUG dht prefixlog.go:107: spawning worker for: <peer.ID QmNXuB>
+bootstrap_1 | 2015-01-03 15:12:12.452602 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+server_1    | 2015-01-03 15:12:12.456694 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+server_1    | 2015-01-03 15:12:12.457350 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc2> adding <peer.ID Qmbtc3> as a provider for 'QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf'
+bootstrap_1 | 2015-01-03 15:12:12.457661 DEBUG dht prefixlog.go:107: <peer.ID QmNXuB> adding <peer.ID Qmbtc3> as a provider for 'QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf'
+bootstrap_1 | 2015-01-03 15:12:12.458600 INFO dht prefixlog.go:116: received provider <peer.ID Qmbtc3> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf (addrs: [/ip4/172.17.2.19/tcp/4031 /ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp])
+server_1    | 2015-01-03 15:12:12.457564 INFO dht prefixlog.go:116: received provider <peer.ID Qmbtc3> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf (addrs: [/ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp /ip4/172.17.2.19/tcp/4031])
+client_1    | 2015-01-03 15:12:12.455402 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> putProvider: <peer.ID QmNXuB> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf ([/ip4/172.17.2.19/tcp/4031 /ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp])
+client_1    | 2015-01-03 15:12:12.456781 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> putProvider: <peer.ID Qmbtc2> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf ([/ip6/fe80::42:acff:fe11:213/tcp/4031 /ip4/172.17.2.19/udp/4032/utp /ip6/fe80::42:acff:fe11:213/udp/4032/utp /ip4/172.17.2.19/tcp/4031])
+client_1    | 2015-01-03 15:12:12.451224 WARNING bitswap prefixlog.go:125: Received batch request for zero blocks
+client_1    | 2015-01-03 15:12:12.465031 DEBUG dht prefixlog.go:107: spawning worker for: <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.465121 DEBUG dht prefixlog.go:107: spawned worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:12.465174 DEBUG dht prefixlog.go:107: running worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 15:12:12.465227 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> dht starting stream
+client_1    | 2015-01-03 15:12:12.465275 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc3>] network opening stream to peer [<peer.ID QmNXuB>]
+client_1    | 2015-01-03 15:12:12.465338 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+client_1    | 2015-01-03 15:12:12.465371 DEBUG dht prefixlog.go:107: spawned worker for: <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.465449 DEBUG dht prefixlog.go:107: running worker for: <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.465509 DEBUG dht prefixlog.go:107: <peer.ID Qmbtc3> dht starting stream
+client_1    | 2015-01-03 15:12:12.465548 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc3>] network opening stream to peer [<peer.ID Qmbtc2>]
+client_1    | 2015-01-03 15:12:12.470738 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+bootstrap_1 | 2015-01-03 15:12:12.471489 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 15:12:12.473570 WARNING dht prefixlog.go:125: handleFindPeer: could not find anything.
+client_1    | 2015-01-03 15:12:12.475832 DEBUG dht prefixlog.go:107: QUERY worker for: <peer.ID QmNXuB> - not found, and no closer peers.
+client_1    | 2015-01-03 15:12:12.476008 DEBUG dht prefixlog.go:107: completing worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 15:12:12.477927 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/dht
+server_1    | 2015-01-03 15:12:12.484231 DEBUG dht prefixlog.go:107: handleFindPeer: sending back '<peer.ID QmNXuB>'
+client_1    | 2015-01-03 15:12:12.487713 DEBUG dht prefixlog.go:107: QUERY worker for: <peer.ID Qmbtc2> - not found, and no closer peers.
+client_1    | 2015-01-03 15:12:12.488083 DEBUG dht prefixlog.go:107: completing worker for: <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.488184 ERROR dht prefixlog.go:110: closestPeers query run error: routing: not found
+client_1    | 2015-01-03 15:12:12.488510 DEBUG bitswap_network ipfs_impl.go:44: bitswap net SendMessage to <peer.ID Qmbtc2>
+client_1    | 2015-01-03 15:12:12.488617 DEBUG swarm2 prefixlog.go:107: [<peer.ID Qmbtc3>] network opening stream to peer [<peer.ID Qmbtc2>]
+client_1    | 2015-01-03 15:12:12.488879 DEBUG swarm2 prefixlog.go:107: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 15:12:12.490027 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/bitswap
+server_1    | 2015-01-03 15:12:12.492141 DEBUG bitswap_network ipfs_impl.go:116: bitswap net handleNewStream from <peer.ID Qmbtc3>
+client_1    | RANDOMSRC = Godeps/_workspace/src/github.com/jbenet/go-random/random
+client_1    | IMAGE_NAME = ipfs-test-latest
+client_1    | 
+client_1    | test: clean setup
+client_1    | 	./run-test-on-img.sh $(IMAGE_NAME)
+client_1    | 
+client_1    | setup: docker_ipfs_image data/filetiny data/filerand
+client_1    | 
+client_1    | save_logs:
+client_1    | 	sh bin/save_logs.sh
+client_1    | 
+client_1    | data/filetiny: Makefile
+client_1    | 	cp Makefile ./data/filetiny # simple
+client_1    | 
+client_1    | data/filerand: bin/random
+client_1    | 	./bin/random 50000000 > ./data/filerand
+client_1    | 
+client_1    | bin/random:
+client_1    | 	go build -o ./bin/random ../$(RANDOMSRC)
+client_1    | 
+client_1    | # just build it every time... this part isn't
+client_1    | # even the lengthy part, and it decreases pain.
+client_1    | docker_ipfs_image:
+client_1    | 	cd .. && docker build -t $(IMAGE_NAME) .
+client_1    | 	docker images | grep $(IMAGE_NAME)
+client_1    | 
+client_1    | clean:
+client_1    | 	sh bin/clean.sh
+client_1    | 	fig stop
+client_1    | 	fig rm -v --force
+client_1    | 	rm -f bin/random
+client_1    | 	rm -f data/filetiny
+client_1    | 	rm -f data/filerand
+client_1    | 	rm -rf build/*
+server_1    | 2015-01-03 15:12:12.493422 DEBUG bitswap prefixlog.go:107: ReceiveMessage from <peer.ID Qmbtc3>
+server_1    | 2015-01-03 15:12:12.493595 DEBUG bitswap prefixlog.go:107: engine.MessageReceived <peer.ID Qmbtc3> start
+server_1    | 2015-01-03 15:12:12.493677 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) enter
+server_1    | 2015-01-03 15:12:12.493746 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) cancel QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+server_1    | 2015-01-03 15:12:12.493837 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) exit
+server_1    | 2015-01-03 15:12:12.493886 DEBUG bitswap prefixlog.go:107: engine.MessageReceived <peer.ID Qmbtc3> done
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:12:13.394933 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID QmNXuB>).sendWantlistToProviders  begin
+bootstrap_1 | 2015-01-03 15:12:13.395810 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID QmNXuB>).sendWantlistMsgToPeers(0) begin
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+server_1    | 2015-01-03 15:12:17.411864 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc2>).sendWantlistToProviders  begin
+server_1    | 2015-01-03 15:12:17.412074 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc2>).sendWantlistMsgToPeers(0) begin
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | 2015-01-03 15:12:19.439607 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistToProviders  begin
+client_1    | 2015-01-03 15:12:19.439888 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistMsgToPeers(0) begin
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:12:33.393796 DEBUG core prefixlog.go:107: <peer.ID QmNXuB> bootstrapping to 2 more nodes
+bootstrap_1 | 2015-01-03 15:12:33.394120 ERROR core prefixlog.go:110: <peer.ID QmNXuB> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:12:33.394191 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+server_1    | 2015-01-03 15:12:37.459020 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 2 more nodes
+server_1    | 2015-01-03 15:12:37.461623 ERROR core prefixlog.go:110: <peer.ID Qmbtc2> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+server_1    | 2015-01-03 15:12:37.461724 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | 2015-01-03 15:12:39.503681 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 2 more nodes
+client_1    | 2015-01-03 15:12:39.504243 ERROR core prefixlog.go:110: <peer.ID Qmbtc3> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | 2015-01-03 15:12:39.507284 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:13:03.395869 DEBUG core prefixlog.go:107: <peer.ID QmNXuB> bootstrapping to 2 more nodes
+bootstrap_1 | 2015-01-03 15:13:03.396291 ERROR core prefixlog.go:110: <peer.ID QmNXuB> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:13:03.396371 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+server_1    | 2015-01-03 15:13:07.463789 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 2 more nodes
+server_1    | 2015-01-03 15:13:07.464324 ERROR core prefixlog.go:110: <peer.ID Qmbtc2> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+server_1    | 2015-01-03 15:13:07.464402 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | 2015-01-03 15:13:09.509151 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 2 more nodes
+client_1    | 2015-01-03 15:13:09.512316 ERROR core prefixlog.go:110: <peer.ID Qmbtc3> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | 2015-01-03 15:13:09.512463 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:13:33.402298 DEBUG core prefixlog.go:107: <peer.ID QmNXuB> bootstrapping to 2 more nodes
+bootstrap_1 | 2015-01-03 15:13:33.406834 ERROR core prefixlog.go:110: <peer.ID QmNXuB> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:13:33.406984 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+server_1    | 2015-01-03 15:13:37.465600 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 2 more nodes
+server_1    | 2015-01-03 15:13:37.466230 ERROR core prefixlog.go:110: <peer.ID Qmbtc2> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+server_1    | 2015-01-03 15:13:37.466597 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | 2015-01-03 15:13:39.514977 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 2 more nodes
+client_1    | 2015-01-03 15:13:39.515770 ERROR core prefixlog.go:110: <peer.ID Qmbtc3> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | 2015-01-03 15:13:39.516020 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:14:03.408165 DEBUG core prefixlog.go:107: <peer.ID QmNXuB> bootstrapping to 2 more nodes
+bootstrap_1 | 2015-01-03 15:14:03.408669 ERROR core prefixlog.go:110: <peer.ID QmNXuB> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:14:03.408784 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+server_1    | 2015-01-03 15:14:07.469407 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 2 more nodes
+server_1    | 2015-01-03 15:14:07.469907 ERROR core prefixlog.go:110: <peer.ID Qmbtc2> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+server_1    | 2015-01-03 15:14:07.470001 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | 2015-01-03 15:14:09.519601 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 2 more nodes
+client_1    | 2015-01-03 15:14:09.520961 ERROR core prefixlog.go:110: <peer.ID Qmbtc3> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | 2015-01-03 15:14:09.521420 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:14:33.410029 DEBUG core prefixlog.go:107: <peer.ID QmNXuB> bootstrapping to 2 more nodes
+bootstrap_1 | 2015-01-03 15:14:33.410325 ERROR core prefixlog.go:110: <peer.ID QmNXuB> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:14:33.410386 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+server_1    | 2015-01-03 15:14:37.473395 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 2 more nodes
+server_1    | 2015-01-03 15:14:37.474234 ERROR core prefixlog.go:110: <peer.ID Qmbtc2> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+server_1    | 2015-01-03 15:14:37.474392 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | 2015-01-03 15:14:39.523005 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 2 more nodes
+client_1    | 2015-01-03 15:14:39.526468 ERROR core prefixlog.go:110: <peer.ID Qmbtc3> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | 2015-01-03 15:14:39.526754 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:15:03.410963 DEBUG core prefixlog.go:107: <peer.ID QmNXuB> bootstrapping to 2 more nodes
+bootstrap_1 | 2015-01-03 15:15:03.411618 ERROR core prefixlog.go:110: <peer.ID QmNXuB> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:15:03.411833 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+server_1    | 2015-01-03 15:15:07.476948 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 2 more nodes
+server_1    | 2015-01-03 15:15:07.477440 ERROR core prefixlog.go:110: <peer.ID Qmbtc2> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+server_1    | 2015-01-03 15:15:07.477788 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | 2015-01-03 15:15:09.530654 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 2 more nodes
+client_1    | 2015-01-03 15:15:09.531135 ERROR core prefixlog.go:110: <peer.ID Qmbtc3> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | 2015-01-03 15:15:09.531252 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:15:33.417298 DEBUG core prefixlog.go:107: <peer.ID QmNXuB> bootstrapping to 2 more nodes
+bootstrap_1 | 2015-01-03 15:15:33.418701 ERROR core prefixlog.go:110: <peer.ID QmNXuB> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:15:33.418843 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+server_1    | 2015-01-03 15:15:37.480641 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 2 more nodes
+server_1    | 2015-01-03 15:15:37.481209 ERROR core prefixlog.go:110: <peer.ID Qmbtc2> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+server_1    | 2015-01-03 15:15:37.481328 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | 2015-01-03 15:15:39.535946 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 2 more nodes
+client_1    | 2015-01-03 15:15:39.536350 ERROR core prefixlog.go:110: <peer.ID Qmbtc3> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | 2015-01-03 15:15:39.536565 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:16:03.421731 DEBUG core prefixlog.go:107: <peer.ID QmNXuB> bootstrapping to 2 more nodes
+bootstrap_1 | 2015-01-03 15:16:03.422180 ERROR core prefixlog.go:110: <peer.ID QmNXuB> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:16:03.422344 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+server_1    | 2015-01-03 15:16:07.483764 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 2 more nodes
+server_1    | 2015-01-03 15:16:07.484538 ERROR core prefixlog.go:110: <peer.ID Qmbtc2> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+server_1    | 2015-01-03 15:16:07.484984 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | 2015-01-03 15:16:09.538450 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 2 more nodes
+client_1    | 2015-01-03 15:16:09.539328 ERROR core prefixlog.go:110: <peer.ID Qmbtc3> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | 2015-01-03 15:16:09.539439 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:16:33.428427 DEBUG core prefixlog.go:107: <peer.ID QmNXuB> bootstrapping to 2 more nodes
+bootstrap_1 | 2015-01-03 15:16:33.431263 ERROR core prefixlog.go:110: <peer.ID QmNXuB> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:16:33.431374 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+server_1    | 2015-01-03 15:16:37.487761 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 2 more nodes
+server_1    | 2015-01-03 15:16:37.488271 ERROR core prefixlog.go:110: <peer.ID Qmbtc2> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+server_1    | 2015-01-03 15:16:37.488372 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | 2015-01-03 15:16:39.546107 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 2 more nodes
+client_1    | 2015-01-03 15:16:39.546609 ERROR core prefixlog.go:110: <peer.ID Qmbtc3> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | 2015-01-03 15:16:39.546887 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:17:03.432462 DEBUG core prefixlog.go:107: <peer.ID QmNXuB> bootstrapping to 2 more nodes
+bootstrap_1 | 2015-01-03 15:17:03.432695 ERROR core prefixlog.go:110: <peer.ID QmNXuB> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 15:17:03.432782 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+server_1    | 2015-01-03 15:17:07.495417 DEBUG core prefixlog.go:107: <peer.ID Qmbtc2> bootstrapping to 2 more nodes
+server_1    | 2015-01-03 15:17:07.495892 ERROR core prefixlog.go:110: <peer.ID Qmbtc2> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+server_1    | 2015-01-03 15:17:07.495974 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | 2015-01-03 15:17:09.550749 DEBUG core prefixlog.go:107: <peer.ID Qmbtc3> bootstrapping to 2 more nodes
+client_1    | 2015-01-03 15:17:09.555084 ERROR core prefixlog.go:110: <peer.ID Qmbtc3> bootstrap error: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | 2015-01-03 15:17:09.555441 ERROR core prefixlog.go:110: must bootstrap to 2 more nodes, but already connected to all candidates
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+client_1    | dockertest> waiting for server to add the file...
+bootstrap_1 | 2015-01-03 15:17:33.433641 DE
