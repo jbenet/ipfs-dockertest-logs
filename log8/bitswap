@@ -1,0 +1,14 @@
+bootstrap_1 | 2015-01-03 15:19:35.966375 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081f76e0 4> setting handler for protocol: /ipfs/bitswap (13)
+server_1    | 2015-01-03 15:19:39.238012 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081e6dd0 4> setting handler for protocol: /ipfs/bitswap (13)
+client_1    | 2015-01-03 15:19:40.518289 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081f93c0 4> setting handler for protocol: /ipfs/bitswap (13)
+client_1    | 2015-01-03 15:19:43.493830 DEBUG blockservice blockservice.go:72: Blockservice: Searching bitswap.
+client_1    | 2015-01-03 15:19:43.494168 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).GetBlock(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf) GetBlockRequestBegin
+client_1    | 2015-01-03 15:19:43.498138 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistMsgToPeers(1) begin
+client_1    | 2015-01-03 15:19:43.522261 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistMsgToPeers(1) <peer.ID Qmbtc2> sending
+client_1    | 2015-01-03 15:19:43.522539 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).bitswap.sendWantlistMsgToPeer(1, <peer.ID Qmbtc2>) sending wantlist
+client_1    | 2015-01-03 15:19:43.522826 DEBUG bitswap_network ipfs_impl.go:44: bitswap net SendMessage to <peer.ID Qmbtc2>
+bootstrap_1 | 2015-01-03 15:19:45.969082 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID QmNXuB>).sendWantlistToProviders  begin
+bootstrap_1 | 2015-01-03 15:19:45.969497 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID QmNXuB>).sendWantlistMsgToPeers(0) begin
+server_1    | 2015-01-03 15:19:49.244350 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc2>).sendWantlistToProviders  begin
+server_1    | 2015-01-03 15:19:49.244768 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc2>).sendWantlistMsgToPeers(0) begin
+client_1    | 2015-01-03 15:20:43.496462 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).GetBlock(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf) GetBlockRequestEnd
