@@ -1,0 +1,112 @@
+server_1    | 2015-01-03 11:16:11.682785 DEBUG net/mux mux.go:81: <Muxer 0xc2081ead30 3> setting handler for protocol: /ipfs/dht (9)
+server_1    | 2015-01-03 11:16:11.769415 DEBUG dht routing.go:429: ping <peer.ID QmNXuB> start
+server_1    | 2015-01-03 11:16:11.769580 DEBUG dht dht_net.go:76: <peer.ID Qmbtc2> dht starting stream
+bootstrap_1 | 2015-01-03 11:16:08.727783 DEBUG net/mux mux.go:81: <Muxer 0xc208207820 3> setting handler for protocol: /ipfs/dht (9)
+server_1    | 2015-01-03 11:16:11.771929 DEBUG dht dht_net.go:90: <peer.ID Qmbtc2> writing
+server_1    | 2015-01-03 11:16:11.774452 DEBUG dht dht_net.go:96: <peer.ID Qmbtc2> reading
+server_1    | 2015-01-03 11:16:11.777039 DEBUG dht dht_net.go:112: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 11:16:11.777452 DEBUG dht routing.go:433: ping <peer.ID QmNXuB> end (err = %!s(<nil>))
+bootstrap_1 | 2015-01-03 11:16:11.772052 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 11:16:11.775223 DEBUG dht handlers.go:135: <peer.ID QmNXuB> Responding to ping from <peer.ID Qmbtc2>!
+client_1    | 2015-01-03 11:16:12.760110 DEBUG net/mux mux.go:81: <Muxer 0xc2081f76e0 3> setting handler for protocol: /ipfs/dht (9)
+client_1    | 2015-01-03 11:16:12.807704 DEBUG dht routing.go:429: ping <peer.ID QmNXuB> start
+client_1    | 2015-01-03 11:16:12.807818 DEBUG dht dht_net.go:76: <peer.ID Qmbtc3> dht starting stream
+bootstrap_1 | 2015-01-03 11:16:12.809730 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+client_1    | 2015-01-03 11:16:12.808930 DEBUG dht dht_net.go:90: <peer.ID Qmbtc3> writing
+client_1    | 2015-01-03 11:16:12.813023 DEBUG dht dht_net.go:96: <peer.ID Qmbtc3> reading
+bootstrap_1 | 2015-01-03 11:16:12.813203 DEBUG dht handlers.go:135: <peer.ID QmNXuB> Responding to ping from <peer.ID Qmbtc3>!
+client_1    | 2015-01-03 11:16:12.815315 DEBUG dht dht_net.go:112: <peer.ID Qmbtc3> done
+client_1    | 2015-01-03 11:16:12.815599 DEBUG dht routing.go:433: ping <peer.ID QmNXuB> end (err = %!s(<nil>))
+server_1    | 2015-01-03 11:16:14.628756 DEBUG dht query.go:99: Run query with 1 peers.
+server_1    | 2015-01-03 11:16:14.628725 DEBUG dht dht_net.go:118: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 11:16:14.628803 DEBUG dht query.go:159: adding peer to query: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.628984 DEBUG dht query.go:183: spawning worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.629072 DEBUG dht query.go:195: spawned worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.629147 DEBUG dht query.go:206: running worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.629216 DEBUG dht dht_net.go:76: <peer.ID Qmbtc2> dht starting stream
+bootstrap_1 | 2015-01-03 11:16:14.634358 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 11:16:14.634577 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+server_1    | 2015-01-03 11:16:14.633879 DEBUG dht dht_net.go:128: <peer.ID Qmbtc2> writing
+server_1    | 2015-01-03 11:16:14.636374 DEBUG dht dht_net.go:90: <peer.ID Qmbtc2> writing
+server_1    | 2015-01-03 11:16:14.638966 DEBUG dht dht_net.go:133: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 11:16:14.639864 DEBUG dht dht_net.go:96: <peer.ID Qmbtc2> reading
+server_1    | 2015-01-03 11:16:14.640086 DEBUG dht dht.go:141: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf ([/ip4/172.17.1.75/udp/4022/utp /ip6/fe80::42:acff:fe11:14b/udp/4022/utp /ip4/172.17.1.75/tcp/4021 /ip6/fe80::42:acff:fe11:14b/tcp/4021])
+bootstrap_1 | 2015-01-03 11:16:14.642291 WARNING dht handlers.go:151: handleFindPeer: could not find anything.
+bootstrap_1 | 2015-01-03 11:16:14.642333 DEBUG dht handlers.go:216: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for 'QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf'
+bootstrap_1 | 2015-01-03 11:16:14.642634 INFO dht handlers.go:233: received provider <peer.ID Qmbtc2> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf (addrs: [/ip4/172.17.1.75/udp/4022/utp /ip6/fe80::42:acff:fe11:14b/udp/4022/utp /ip4/172.17.1.75/tcp/4021 /ip6/fe80::42:acff:fe11:14b/tcp/4021])
+server_1    | 2015-01-03 11:16:14.649272 DEBUG dht dht_net.go:112: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 11:16:14.649597 DEBUG dht query.go:258: QUERY worker for: <peer.ID QmNXuB> - not found, and no closer peers.
+server_1    | 2015-01-03 11:16:14.650908 DEBUG dht query.go:211: completing worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.651008 ERROR dht routing.go:201: closestPeers query run error: routing: not found
+server_1    | 2015-01-03 11:16:14.731849 DEBUG dht query.go:99: Run query with 1 peers.
+server_1    | 2015-01-03 11:16:14.731950 DEBUG dht query.go:159: adding peer to query: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.731897 DEBUG dht dht_net.go:118: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 11:16:14.732004 DEBUG dht query.go:183: spawning worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.732046 DEBUG dht query.go:195: spawned worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.732086 DEBUG dht query.go:206: running worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.732127 DEBUG dht dht_net.go:76: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 11:16:14.732641 DEBUG dht dht_net.go:128: <peer.ID Qmbtc2> writing
+server_1    | 2015-01-03 11:16:14.732995 DEBUG dht dht_net.go:90: <peer.ID Qmbtc2> writing
+server_1    | 2015-01-03 11:16:14.733343 DEBUG dht dht_net.go:133: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 11:16:14.733523 DEBUG dht dht_net.go:96: <peer.ID Qmbtc2> reading
+server_1    | 2015-01-03 11:16:14.733513 DEBUG dht dht.go:141: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmQczRUrAkh9wxd72qTM8ftsUiWXpup7556p8Vm5VjSQF5 ([/ip4/172.17.1.75/tcp/4021 /ip6/fe80::42:acff:fe11:14b/tcp/4021 /ip4/172.17.1.75/udp/4022/utp /ip6/fe80::42:acff:fe11:14b/udp/4022/utp])
+bootstrap_1 | 2015-01-03 11:16:14.735215 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 11:16:14.735501 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 11:16:14.735980 DEBUG dht handlers.go:216: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for 'QmQczRUrAkh9wxd72qTM8ftsUiWXpup7556p8Vm5VjSQF5'
+bootstrap_1 | 2015-01-03 11:16:14.736354 WARNING dht handlers.go:151: handleFindPeer: could not find anything.
+bootstrap_1 | 2015-01-03 11:16:14.736288 INFO dht handlers.go:233: received provider <peer.ID Qmbtc2> for QmQczRUrAkh9wxd72qTM8ftsUiWXpup7556p8Vm5VjSQF5 (addrs: [/ip4/172.17.1.75/tcp/4021 /ip6/fe80::42:acff:fe11:14b/tcp/4021 /ip4/172.17.1.75/udp/4022/utp /ip6/fe80::42:acff:fe11:14b/udp/4022/utp])
+server_1    | 2015-01-03 11:16:14.738952 DEBUG dht dht_net.go:112: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 11:16:14.739320 DEBUG dht query.go:258: QUERY worker for: <peer.ID QmNXuB> - not found, and no closer peers.
+server_1    | 2015-01-03 11:16:14.739522 DEBUG dht query.go:211: completing worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.739692 ERROR dht routing.go:201: closestPeers query run error: routing: not found
+server_1    | 2015-01-03 11:16:14.748304 DEBUG dht query.go:99: Run query with 1 peers.
+server_1    | 2015-01-03 11:16:14.748488 DEBUG dht dht_net.go:118: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 11:16:14.748545 DEBUG dht query.go:159: adding peer to query: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.750277 DEBUG dht query.go:183: spawning worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.750572 DEBUG dht query.go:195: spawned worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.750770 DEBUG dht query.go:206: running worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.750848 DEBUG dht dht_net.go:76: <peer.ID Qmbtc2> dht starting stream
+bootstrap_1 | 2015-01-03 11:16:14.751860 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+server_1    | 2015-01-03 11:16:14.752053 DEBUG dht dht_net.go:128: <peer.ID Qmbtc2> writing
+server_1    | 2015-01-03 11:16:14.754966 DEBUG dht dht_net.go:90: <peer.ID Qmbtc2> writing
+server_1    | 2015-01-03 11:16:14.757292 DEBUG dht dht_net.go:133: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 11:16:14.758077 DEBUG dht dht.go:141: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmYo4kU5dKb7FhDEMMk64XkbD5HsE9rWJVY35RPWSfjdMY ([/ip6/fe80::42:acff:fe11:14b/tcp/4021 /ip4/172.17.1.75/udp/4022/utp /ip6/fe80::42:acff:fe11:14b/udp/4022/utp /ip4/172.17.1.75/tcp/4021])
+server_1    | 2015-01-03 11:16:14.758990 DEBUG dht dht_net.go:96: <peer.ID Qmbtc2> reading
+bootstrap_1 | 2015-01-03 11:16:14.754841 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 11:16:14.757568 DEBUG dht handlers.go:216: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for 'QmYo4kU5dKb7FhDEMMk64XkbD5HsE9rWJVY35RPWSfjdMY'
+bootstrap_1 | 2015-01-03 11:16:14.757759 INFO dht handlers.go:233: received provider <peer.ID Qmbtc2> for QmYo4kU5dKb7FhDEMMk64XkbD5HsE9rWJVY35RPWSfjdMY (addrs: [/ip6/fe80::42:acff:fe11:14b/tcp/4021 /ip4/172.17.1.75/udp/4022/utp /ip6/fe80::42:acff:fe11:14b/udp/4022/utp /ip4/172.17.1.75/tcp/4021])
+bootstrap_1 | 2015-01-03 11:16:14.760727 DEBUG dht handlers.go:160: handleFindPeer: sending back '<peer.ID Qmbtc3>'
+server_1    | 2015-01-03 11:16:14.763003 DEBUG dht dht_net.go:112: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 11:16:14.768912 DEBUG dht query.go:250: PEERS CLOSER -- worker for: <peer.ID QmNXuB> (1 closer peers)
+server_1    | 2015-01-03 11:16:14.769145 DEBUG dht query.go:159: adding peer to query: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 11:16:14.769247 DEBUG dht query.go:255: PEERS CLOSER -- worker for: <peer.ID QmNXuB> added <peer.ID Qmbtc3> ([/ip4/172.17.1.76/udp/4032/utp /ip6/fe80::42:acff:fe11:14c/udp/4032/utp /ip4/172.17.1.76/tcp/4031 /ip6/fe80::42:acff:fe11:14c/tcp/4031])
+server_1    | 2015-01-03 11:16:14.769465 DEBUG dht query.go:211: completing worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 11:16:14.770055 DEBUG dht dht_net.go:118: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 11:16:14.779184 DEBUG dht query.go:183: spawning worker for: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 11:16:14.779708 DEBUG dht query.go:195: spawned worker for: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 11:16:14.779819 DEBUG dht query.go:206: running worker for: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 11:16:14.779890 INFO dht query.go:218: worker for: <peer.ID Qmbtc3> -- not connected. dial start
+client_1    | 2015-01-03 11:16:15.734816 DEBUG dht routing.go:236: <peer.ID Qmbtc3> FindProviders QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+client_1    | 2015-01-03 11:16:15.734932 DEBUG dht query.go:99: Run query with 1 peers.
+client_1    | 2015-01-03 11:16:15.738494 DEBUG dht query.go:159: adding peer to query: <peer.ID QmNXuB>
+client_1    | 2015-01-03 11:16:15.741243 DEBUG dht query.go:183: spawning worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 11:16:15.741316 DEBUG dht query.go:195: spawned worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 11:16:15.741378 DEBUG dht query.go:206: running worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 11:16:15.741574 DEBUG dht routing.go:260: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  begin
+client_1    | 2015-01-03 11:16:15.741606 DEBUG dht dht_net.go:76: <peer.ID Qmbtc3> dht starting stream
+client_1    | 2015-01-03 11:16:15.750282 DEBUG dht dht_net.go:90: <peer.ID Qmbtc3> writing
+client_1    | 2015-01-03 11:16:15.753557 DEBUG dht dht_net.go:96: <peer.ID Qmbtc3> reading
+bootstrap_1 | 2015-01-03 11:16:15.750301 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 11:16:15.757114 DEBUG dht handlers.go:174: <peer.ID QmNXuB> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  begin
+bootstrap_1 | 2015-01-03 11:16:15.758433 DEBUG dht handlers.go:194: <peer.ID QmNXuB> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  have 1 providers: [{<peer.ID Qmbtc2> [/ip4/172.17.1.75/tcp/4021 /ip6/fe80::42:acff:fe11:14b/tcp/4021 /ip4/172.17.1.75/udp/4022/utp /ip6/fe80::42:acff:fe11:14b/udp/4022/utp]}]
+bootstrap_1 | 2015-01-03 11:16:15.760485 DEBUG dht handlers.go:205: <peer.ID QmNXuB> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  end
+client_1    | 2015-01-03 11:16:15.769551 DEBUG dht dht_net.go:112: <peer.ID Qmbtc3> done
+client_1    | 2015-01-03 11:16:15.772064 DEBUG dht routing.go:268: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got 1 provider entries
+client_1    | 2015-01-03 11:16:15.772219 DEBUG dht routing.go:270: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got 1 provider entries decoded
+client_1    | 2015-01-03 11:16:15.772288 DEBUG dht routing.go:274: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got provider: {<peer.ID Qmbtc2> [/ip4/172.17.1.75/tcp/4021 /ip6/fe80::42:acff:fe11:14b/tcp/4021 /ip4/172.17.1.75/udp/4022/utp /ip6/fe80::42:acff:fe11:14b/udp/4022/utp]}
+client_1    | 2015-01-03 11:16:15.772442 DEBUG dht routing.go:276: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  using provider: {<peer.ID Qmbtc2> [/ip4/172.17.1.75/tcp/4021 /ip6/fe80::42:acff:fe11:14b/tcp/4021 /ip4/172.17.1.75/udp/4022/utp /ip6/fe80::42:acff:fe11:14b/udp/4022/utp]}
+client_1    | 2015-01-03 11:16:15.772528 DEBUG dht routing.go:293: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got closer peers: []
+client_1    | 2015-01-03 11:16:15.772549 DEBUG dht routing.go:294: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  end
+client_1    | 2015-01-03 11:16:15.772574 DEBUG dht query.go:258: QUERY worker for: <peer.ID QmNXuB> - not found, and no closer peers.
+client_1    | 2015-01-03 11:16:15.772612 DEBUG dht query.go:211: completing worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 11:16:15.773318 ERROR dht routing.go:300: FindProviders Query error: routing: not found

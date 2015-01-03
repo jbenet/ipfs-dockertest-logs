@@ -1,0 +1,8 @@
+server_1    | 2015-01-03 11:16:11.683589 DEBUG net/mux mux.go:81: <Muxer 0xc2081ead30 4> setting handler for protocol: /ipfs/bitswap (13)
+bootstrap_1 | 2015-01-03 11:16:08.727893 DEBUG net/mux mux.go:81: <Muxer 0xc208207820 4> setting handler for protocol: /ipfs/bitswap (13)
+client_1    | 2015-01-03 11:16:12.761994 DEBUG net/mux mux.go:81: <Muxer 0xc2081f76e0 4> setting handler for protocol: /ipfs/bitswap (13)
+client_1    | 2015-01-03 11:16:15.731170 DEBUG blockservice blockservice.go:72: Blockservice: Searching bitswap.
+client_1    | 2015-01-03 11:16:15.732355 DEBUG bitswap bitswap.go:192: <peer.ID Qmbtc3> bitswap.sendWantlistMsgTo(1) begin
+client_1    | 2015-01-03 11:16:15.772875 DEBUG bitswap bitswap.go:177: <peer.ID Qmbtc3> bitswap.sendWantlistMsgToPeer(1, <peer.ID Qmbtc2>) sending wantlist
+bootstrap_1 | 2015-01-03 11:16:18.729051 DEBUG bitswap bitswap.go:227: <peer.ID QmNXuB> bitswap.sendWantlistToProviders begin
+bootstrap_1 | 2015-01-03 11:16:18.729468 DEBUG bitswap bitswap.go:192: <peer.ID QmNXuB> bitswap.sendWantlistMsgTo(0) begin
