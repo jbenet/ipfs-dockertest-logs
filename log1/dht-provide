@@ -1,0 +1,9 @@
+bootstrap_1 | 2015-01-03 08:11:06.064074 DEBUG dht handlers.go:209: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for '<peer.ID QmcdNX>'
+bootstrap_1 | 2015-01-03 08:11:06.064629 INFO dht handlers.go:226: received provider <peer.ID Qmbtc2> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf (addrs: [/ip4/172.17.0.15/udp/4022/utp /ip6/fe80::42:acff:fe11:f/udp/4022/utp /ip4/172.17.0.15/tcp/4021 /ip6/fe80::42:acff:fe11:f/tcp/4021])
+server_1    | 2015-01-03 08:11:06.076904 DEBUG dht dht.go:141: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf ([/ip4/172.17.0.15/udp/4022/utp /ip6/fe80::42:acff:fe11:f/udp/4022/utp /ip4/172.17.0.15/tcp/4021 /ip6/fe80::42:acff:fe11:f/tcp/4021])
+server_1    | 2015-01-03 08:11:06.167542 DEBUG dht dht.go:141: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmVKQcTNXT1eTkgahqJNJfSYDdi7e5dsw9fKEAMj93QRf4 ([/ip4/172.17.0.15/tcp/4021 /ip6/fe80::42:acff:fe11:f/tcp/4021 /ip4/172.17.0.15/udp/4022/utp /ip6/fe80::42:acff:fe11:f/udp/4022/utp])
+bootstrap_1 | 2015-01-03 08:11:06.169692 DEBUG dht handlers.go:209: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for '<peer.ID QmVKQc>'
+bootstrap_1 | 2015-01-03 08:11:06.170223 INFO dht handlers.go:226: received provider <peer.ID Qmbtc2> for QmVKQcTNXT1eTkgahqJNJfSYDdi7e5dsw9fKEAMj93QRf4 (addrs: [/ip4/172.17.0.15/tcp/4021 /ip6/fe80::42:acff:fe11:f/tcp/4021 /ip4/172.17.0.15/udp/4022/utp /ip6/fe80::42:acff:fe11:f/udp/4022/utp])
+client_1    | 2015-01-03 08:11:06.613216 DEBUG dht routing.go:235: <peer.ID Qmbtc3> FindProviders QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+bootstrap_1 | 2015-01-03 08:11:06.639560 DEBUG dht handlers.go:172: handling GetProviders: 'QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf'
+client_1    | 2015-01-03 08:11:06.642673 ERROR dht routing.go:289: FindProviders Query error: routing: not found
