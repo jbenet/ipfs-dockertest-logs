@@ -1,0 +1,550 @@
+sh bin/clean.sh
+1210229539d2
+fig stop
+fig rm -v --force
+Going to remove dockertest_data_1, dockertest_bootstrap_1
+rm -f bin/random
+rm -f data/filetiny
+rm -f data/filerand
+rm -rf build/*
+cd .. && docker build -t ipfs-test-latest .
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon 62.95 MBSending build context to Docker daemon  63.5 MBSending build context to Docker daemon 64.06 MBSending build context to Docker daemon 64.62 MBSending build context to Docker daemon 65.18 MBSending build context to Docker daemon 65.73 MBSending build context to Docker daemon 66.29 MBSending build context to Docker daemon 66.85 MBSending build context to Docker daemon  67.4 MBSending build context to Docker daemon 67.96 MBSending build context to Docker daemon 68.52 MBSending build context to Docker daemon 69.07 MBSending build context to Docker daemon 69.63 MBSending build context to Docker daemon 69.68 MB
+Sending build context to Docker daemon 
+Step 0 : FROM golang:1.3
+ ---> ef701a3b8b5a
+Step 1 : MAINTAINER Brian Tiger Chow <btc@perfmode.com>
+ ---> Using cache
+ ---> 0c4f44fbbdcd
+Step 2 : COPY . /go/src/github.com/jbenet/go-ipfs
+ ---> 8910a6eb0729
+Removing intermediate container d473e52631e9
+Step 3 : RUN cd /go/src/github.com/jbenet/go-ipfs/cmd/ipfs && go install
+ ---> Running in b42ec58dedcf
+ ---> 4538bf283c57
+Removing intermediate container b42ec58dedcf
+Step 4 : EXPOSE 4001 5001 4002/udp
+ ---> Running in ac5c744753c2
+ ---> 3d6452081a4b
+Removing intermediate container ac5c744753c2
+Step 5 : ENTRYPOINT ipfs
+ ---> Running in 7d54594db44b
+ ---> 0ac6c84b8d29
+Removing intermediate container 7d54594db44b
+Step 6 : CMD daemon --init
+ ---> Running in a601ef6ac167
+ ---> f6ae30953761
+Removing intermediate container a601ef6ac167
+Successfully built f6ae30953761
+docker images | grep ipfs-test-latest
+ipfs-test-latest       latest              f6ae30953761        1 seconds ago        557.2 MB
+cp Makefile ./data/filetiny # simple
+go build -o ./bin/random ../Godeps/_workspace/src/github.com/jbenet/go-random/random
+./bin/random 50000000 > ./data/filerand
+./run-test-on-img.sh ipfs-test-latest
+using docker image: f6ae30953761 (ipfs-test-latest)
+docker tag -f f6ae30953761 zaqwsx_ipfs-test-img
+fig build --no-cache
+ ---> f6ae30953761
+Step 1 : RUN ipfs init -b=1024
+ ---> Running in 89e01eee42b5
+initializing ipfs node at /root/.go-ipfs
+generating key pair...done
+peer identity: QmV1oPwgxFsi7P5YfhnPYEmquhYaUMDv4Nonw6hgTLnSjK
+
+to get started, enter: ipfs cat QmYpv2VEsxzTTXRYX3PjDg961cnJE3kY1YDXLycHGQ3zZB
+ ---> 3b357b2bbe2f
+Removing intermediate container 89e01eee42b5
+Step 2 : ADD . /tmp/id
+ ---> ae093304f457
+Removing intermediate container d11be9a94045
+Step 3 : RUN mv -f /tmp/id/config /root/.go-ipfs/config
+ ---> Running in d139d0347db3
+ ---> 5e2c731d0dc0
+Removing intermediate container d139d0347db3
+Step 4 : RUN ipfs id
+ ---> Running in c5163f29b569
+{
+	"ID": "QmNXuBh8HFsWq68Fid8dMbGNQTh7eG6hV9rr1fQyfmfomE",
+	"PublicKey": "",
+	"Addresses": null,
+	"AgentVersion": "",
+	"ProtocolVersion": ""
+ ---> 6b557d8b2851
+Removing intermediate container c5163f29b569
+Step 5 : ENV IPFS_LOGGING_FMT nocolor
+ ---> Running in 1a5145b78f93
+ ---> bdfa3fed9ca2
+Removing intermediate container 1a5145b78f93
+Step 6 : EXPOSE 4011 4012/udp
+ ---> Running in e3c83e586d3c
+ ---> 1e1bd3956b25
+Removing intermediate container e3c83e586d3c
+Successfully built 1e1bd3956b25
+ ---> 8eaa4ff06b53
+Step 1 : ADD filetiny /data/filetiny
+ ---> ca4998bda63f
+Removing intermediate container 8dc8bf119025
+Step 2 : ADD filerand /data/filerand
+ ---> 0938de0818c6
+Removing intermediate container 46a3ec2d3130
+Step 3 : VOLUME /data
+ ---> Running in de42be6b8c2f
+ ---> c1bd2a6c06b4
+Removing intermediate container de42be6b8c2f
+Successfully built c1bd2a6c06b4
+ ---> f6ae30953761
+Step 1 : RUN ipfs init -b=1024
+ ---> Running in 56442152f228
+initializing ipfs node at /root/.go-ipfs
+generating key pair...done
+peer identity: QmXNYBeA1W61zuqCrk8CN3awaSMNAQoiLjvLZFA5kTv7JE
+
+to get started, enter: ipfs cat QmYpv2VEsxzTTXRYX3PjDg961cnJE3kY1YDXLycHGQ3zZB
+ ---> a89d2ed45044
+Removing intermediate container 56442152f228
+Step 2 : ADD . /tmp/test
+ ---> 1210134f5e7e
+Removing intermediate container 61ace6f3018e
+Step 3 : RUN mv -f /tmp/test/config /root/.go-ipfs/config
+ ---> Running in 81eaa99d81cd
+ ---> 2940f606c0ee
+Removing intermediate container 81eaa99d81cd
+Step 4 : RUN ipfs id
+ ---> Running in ef0dcd1984ef
+{
+	"ID": "Qmbtc2C7rqmAfdeMTM7FX4YF8CeBumMCfk5Z1GBCMbMTfY",
+	"PublicKey": "",
+	"Addresses": null,
+	"AgentVersion": "",
+	"ProtocolVersion": ""
+ ---> a7bd0a8088bb
+Removing intermediate container ef0dcd1984ef
+Step 5 : RUN chmod +x /tmp/test/run.sh
+ ---> Running in b2ccc4e9e1ca
+ ---> 55697325fd44
+Removing intermediate container b2ccc4e9e1ca
+Step 6 : EXPOSE 4021 4022/udp
+ ---> Running in 84c2222e5121
+ ---> 25bfba11a76b
+Removing intermediate container 84c2222e5121
+Step 7 : ENV IPFS_LOGGING_FMT nocolor
+ ---> Running in 103b06b71524
+ ---> 8b2139ecfdba
+Removing intermediate container 103b06b71524
+Step 8 : ENTRYPOINT /bin/bash
+ ---> Running in 35ded18d77a2
+ ---> 5f74ee56bb41
+Removing intermediate container 35ded18d77a2
+Step 9 : CMD /tmp/test/run.sh
+ ---> Running in 1b19b58581cc
+ ---> 442f57f1ed6f
+Removing intermediate container 1b19b58581cc
+Successfully built 442f57f1ed6f
+ ---> f6ae30953761
+Step 1 : RUN ipfs init -b=1024
+ ---> Running in 3986c6d901d5
+initializing ipfs node at /root/.go-ipfs
+generating key pair...done
+peer identity: QmfHqwNYS4QqLV6JYaza1Dagu73EMjDfRf2x65JfckxKUD
+
+to get started, enter: ipfs cat QmYpv2VEsxzTTXRYX3PjDg961cnJE3kY1YDXLycHGQ3zZB
+ ---> 61da1ec7a765
+Removing intermediate container 3986c6d901d5
+Step 2 : ADD . /tmp/id
+ ---> 881d06754ade
+Removing intermediate container db541b7e45f6
+Step 3 : RUN mv -f /tmp/id/config /root/.go-ipfs/config
+ ---> Running in f1102be31c15
+ ---> 9f72c66b88f3
+Removing intermediate container f1102be31c15
+Step 4 : RUN ipfs id
+ ---> Running in 35be417de2af
+{
+	"ID": "Qmbtc35vdjVh5o9w2AaT2SgcWwigsaoZUpRfq2FSrFD6mb",
+	"PublicKey": "",
+	"Addresses": null,
+	"AgentVersion": "",
+	"ProtocolVersion": ""
+ ---> 859bb985893f
+Removing intermediate container 35be417de2af
+Step 5 : EXPOSE 4031 4032/udp
+ ---> Running in 813a2a415114
+ ---> 63b8c51d77fe
+Removing intermediate container 813a2a415114
+Step 6 : ENV IPFS_LOGGING_FMT nocolor
+ ---> Running in 610e6f03864d
+ ---> 43ea1f474226
+Removing intermediate container 610e6f03864d
+Step 7 : ENTRYPOINT /bin/bash
+ ---> Running in c8ee78df723c
+ ---> 6103c6a9ba69
+Removing intermediate container c8ee78df723c
+Step 8 : CMD /tmp/id/run.sh
+ ---> Running in b0ceb7c6c402
+ ---> 11ecd89d1533
+Removing intermediate container b0ceb7c6c402
+Successfully built 11ecd89d1533
+fig up --no-color | tee build/fig.log
+Attaching to dockertest_bootstrap_1, dockertest_data_1, dockertest_server_1, dockertest_client_1
+bootstrap_1 | 2015-01-03 10:24:05.838394 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+bootstrap_1 | 2015-01-03 10:24:05.862801 DEBUG cmd/ipfs main.go:218: config path is /root/.go-ipfs
+bootstrap_1 | 2015-01-03 10:24:05.863475 INFO cmd/ipfs main.go:303: looking for running daemon...
+bootstrap_1 | 2015-01-03 10:24:05.863645 DEBUG cmd/ipfs main.go:256: Calling pre-command hooks...
+bootstrap_1 | 2015-01-03 10:24:05.863695 DEBUG cmd/ipfs main.go:284: Calling hook: Configure Event Logger
+bootstrap_1 | 2015-01-03 10:24:05.863988 INFO cmd/ipfs main.go:340: Executing command locally
+bootstrap_1 | 2015-01-03 10:24:05.917432 INFO conn listen.go:116: swarm listening on /ip6/::/tcp/4011
+bootstrap_1 | 2015-01-03 10:24:05.918054 INFO conn listen.go:116: swarm listening on /ip6/::/udp/4012/utp
+bootstrap_1 | 2015-01-03 10:24:05.918594 DEBUG net/mux mux.go:81: <Muxer 0xc2081f1780 0> setting handler for protocol: /ipfs/identify (14)
+bootstrap_1 | 2015-01-03 10:24:05.918708 DEBUG net/mux mux.go:81: <Muxer 0xc2081f1780 1> setting handler for protocol: /ipfs/relay (11)
+bootstrap_1 | 2015-01-03 10:24:05.919163 DEBUG swarm2 addr.go:68: InterfaceListenAddresses:[/ip4/172.17.0.239/tcp/4011 /ip6/fe80::42:acff:fe11:ef/tcp/4011 /ip4/172.17.0.239/udp/4012/utp /ip6/fe80::42:acff:fe11:ef/udp/4012/utp]
+bootstrap_1 | 2015-01-03 10:24:05.919300 DEBUG net/mux mux.go:81: <Muxer 0xc2081f1780 2> setting handler for protocol: /ipfs/diagnostics (17)
+bootstrap_1 | 2015-01-03 10:24:05.919430 DEBUG net/mux mux.go:81: <Muxer 0xc2081f1780 3> setting handler for protocol: /ipfs/dht (9)
+bootstrap_1 | 2015-01-03 10:24:05.919544 DEBUG net/mux mux.go:81: <Muxer 0xc2081f1780 4> setting handler for protocol: /ipfs/bitswap (13)
+bootstrap_1 | daemon listening on /ip4/127.0.0.1/tcp/5001
+bootstrap_1 | 2015-01-03 10:24:05.920294 DEBUG core bootstrap.go:67: <peer.ID QmNXuB> bootstrapping to 4 more nodes
+bootstrap_1 | 2015-01-03 10:24:05.920541 ERROR core bootstrap.go:91: <peer.ID QmNXuB> bootstrap error: must bootstrap to 4 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 10:24:05.920587 ERROR core bootstrap.go:39: must bootstrap to 4 more nodes, but already connected to all candidates
+bootstrap_1 | 2015-01-03 10:24:08.477978 DEBUG conn conn.go:47: newSingleConn 0xc20822e080: <peer.ID QmNXuB> to <peer.ID >
+bootstrap_1 | 2015-01-03 10:24:08.478427 DEBUG secio protocol.go:83: handshake: <peer.ID QmNXuB> <--start--> <peer.ID >
+bootstrap_1 | 2015-01-03 10:24:08.479218 DEBUG secio protocol.go:132: 1.1 Identify: <peer.ID QmNXuB> Remote Peer Identified as <peer.ID Qmbtc2>
+bootstrap_1 | 2015-01-03 10:24:08.497281 DEBUG secio protocol.go:295: handshake: <peer.ID QmNXuB> <--finish--> <peer.ID Qmbtc2>
+bootstrap_1 | 2015-01-03 10:24:08.497562 DEBUG conn secure_conn.go:56: newSecureConn: <peer.ID QmNXuB> to <peer.ID Qmbtc2> handshake success!
+bootstrap_1 | 2015-01-03 10:24:08.507450 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/identify
+bootstrap_1 | 2015-01-03 10:24:08.515332 DEBUG swarm2 addr.go:68: InterfaceListenAddresses:[/ip4/172.17.0.239/tcp/4011 /ip6/fe80::42:acff:fe11:ef/tcp/4011 /ip4/172.17.0.239/udp/4012/utp /ip6/fe80::42:acff:fe11:ef/udp/4012/utp]
+bootstrap_1 | 2015-01-03 10:24:08.515410 DEBUG net/identify id.go:155: <peer.ID QmNXuB> sent listen addrs to <peer.ID Qmbtc2>: [/ip4/172.17.0.239/tcp/4011 /ip6/fe80::42:acff:fe11:ef/tcp/4011 /ip4/172.17.0.239/udp/4012/utp /ip6/fe80::42:acff:fe11:ef/udp/4012/utp]
+bootstrap_1 | 2015-01-03 10:24:08.516998 DEBUG net/identify id.go:185: <peer.ID QmNXuB> received listen addrs for <peer.ID Qmbtc2>: [/ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021 /ip4/172.17.0.241/udp/4022/utp /ip6/fe80::42:acff:fe11:f1/udp/4022/utp]
+bootstrap_1 | 2015-01-03 10:24:08.517261 DEBUG net/identify id.go:130: /ipfs/identify received message from <peer.ID Qmbtc2> /ip4/172.17.0.241/tcp/56568
+bootstrap_1 | 2015-01-03 10:24:08.517761 DEBUG net/identify id.go:113: /ipfs/identify sent message to <peer.ID Qmbtc2> /ip4/172.17.0.241/tcp/56568
+bootstrap_1 | 2015-01-03 10:24:08.527304 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 10:24:08.528627 DEBUG dht handlers.go:135: <peer.ID QmNXuB> Responding to ping from <peer.ID Qmbtc2>!
+server_1    | 2015-01-03 10:24:07.628879 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+server_1    | 2015-01-03 10:24:07.673951 DEBUG cmd/ipfs main.go:218: config path is /root/.go-ipfs
+server_1    | 2015-01-03 10:24:07.675114 INFO cmd/ipfs main.go:303: looking for running daemon...
+server_1    | 2015-01-03 10:24:07.675387 DEBUG cmd/ipfs main.go:256: Calling pre-command hooks...
+server_1    | 2015-01-03 10:24:07.675535 DEBUG cmd/ipfs main.go:269: Calling hook: Check for updates
+server_1    | 2015-01-03 10:24:07.676163 INFO updates updates.go:207: checking for update
+server_1    | 2015-01-03 10:24:08.349612 NOTICE updates updates.go:211: No update available, checked on 2015-01-03 10:24:08.349602638 +0000 UTC
+server_1    | 2015-01-03 10:24:08.350009 DEBUG cmd/ipfs main.go:284: Calling hook: Configure Event Logger
+server_1    | 2015-01-03 10:24:08.350996 INFO cmd/ipfs main.go:340: Executing command locally
+server_1    | added /ip4/172.17.0.239/tcp/4011/QmNXuBh8HFsWq68Fid8dMbGNQTh7eG6hV9rr1fQyfmfomE
+server_1    | dockertest> starting server daemon
+server_1    | 2015-01-03 10:24:08.363061 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+server_1    | 2015-01-03 10:24:08.393828 DEBUG cmd/ipfs main.go:218: config path is /root/.go-ipfs
+server_1    | 2015-01-03 10:24:08.394705 INFO cmd/ipfs main.go:303: looking for running daemon...
+server_1    | 2015-01-03 10:24:08.394896 DEBUG cmd/ipfs main.go:256: Calling pre-command hooks...
+server_1    | 2015-01-03 10:24:08.394951 DEBUG cmd/ipfs main.go:284: Calling hook: Configure Event Logger
+server_1    | 2015-01-03 10:24:08.395187 INFO cmd/ipfs main.go:340: Executing command locally
+client_1    | 2015-01-03 10:24:08.464804 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+server_1    | 2015-01-03 10:24:08.467751 INFO conn listen.go:116: swarm listening on /ip6/::/tcp/4021
+client_1    | 2015-01-03 10:24:08.504821 DEBUG cmd/ipfs main.go:218: config path is /root/.go-ipfs
+server_1    | 2015-01-03 10:24:08.469638 INFO conn listen.go:116: swarm listening on /ip6/::/udp/4022/utp
+client_1    | 2015-01-03 10:24:08.506523 INFO cmd/ipfs main.go:303: looking for running daemon...
+server_1    | 2015-01-03 10:24:08.469863 DEBUG net/mux mux.go:81: <Muxer 0xc2081e4dd0 0> setting handler for protocol: /ipfs/identify (14)
+client_1    | 2015-01-03 10:24:08.506839 DEBUG cmd/ipfs main.go:256: Calling pre-command hooks...
+server_1    | 2015-01-03 10:24:08.469911 DEBUG net/mux mux.go:81: <Muxer 0xc2081e4dd0 1> setting handler for protocol: /ipfs/relay (11)
+client_1    | 2015-01-03 10:24:08.511299 DEBUG cmd/ipfs main.go:269: Calling hook: Check for updates
+server_1    | 2015-01-03 10:24:08.470510 DEBUG swarm2 addr.go:68: InterfaceListenAddresses:[/ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021 /ip4/172.17.0.241/udp/4022/utp /ip6/fe80::42:acff:fe11:f1/udp/4022/utp]
+client_1    | 2015-01-03 10:24:08.514468 INFO updates updates.go:207: checking for update
+server_1    | 2015-01-03 10:24:08.470568 DEBUG net/mux mux.go:81: <Muxer 0xc2081e4dd0 2> setting handler for protocol: /ipfs/diagnostics (17)
+server_1    | 2015-01-03 10:24:08.470612 DEBUG net/mux mux.go:81: <Muxer 0xc2081e4dd0 3> setting handler for protocol: /ipfs/dht (9)
+server_1    | 2015-01-03 10:24:08.470692 DEBUG net/mux mux.go:81: <Muxer 0xc2081e4dd0 4> setting handler for protocol: /ipfs/bitswap (13)
+server_1    | 2015-01-03 10:24:08.471197 DEBUG core bootstrap.go:67: <peer.ID Qmbtc2> bootstrapping to 4 more nodes
+server_1    | daemon listening on /ip4/127.0.0.1/tcp/5001
+server_1    | 2015-01-03 10:24:08.471768 DEBUG core bootstrap.go:97: <peer.ID Qmbtc2> bootstrapping to 4 nodes: [{<peer.ID QmNXuB> [/ip4/172.17.0.239/tcp/4011]}]
+server_1    | 2015-01-03 10:24:08.472341 DEBUG core bootstrap.go:122: <peer.ID Qmbtc2> bootstrapping to <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:08.472506 DEBUG p2p/host/basic basic_host.go:122: host %!s(func() peer.ID=0x656c60) dialing <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:08.472697 DEBUG swarm2 swarm_net.go:35: [<peer.ID Qmbtc2>] network dialing peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 10:24:08.473173 DEBUG conn dial.go:47: <peer.ID Qmbtc2> dialing <peer.ID QmNXuB> /ip4/172.17.0.239/tcp/4011
+server_1    | 2015-01-03 10:24:08.474749 DEBUG conn conn.go:47: newSingleConn 0xc2081e9940: <peer.ID Qmbtc2> to <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:08.475140 DEBUG secio protocol.go:83: handshake: <peer.ID Qmbtc2> <--start--> <peer.ID >
+server_1    | 2015-01-03 10:24:08.479445 DEBUG secio protocol.go:132: 1.1 Identify: <peer.ID Qmbtc2> Remote Peer Identified as <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:08.497087 DEBUG secio protocol.go:295: handshake: <peer.ID Qmbtc2> <--finish--> <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:08.497425 DEBUG conn secure_conn.go:56: newSecureConn: <peer.ID Qmbtc2> to <peer.ID QmNXuB> handshake success!
+server_1    | 2015-01-03 10:24:08.498092 DEBUG swarm2 swarm_net.go:41: network for <peer.ID Qmbtc2> finished dialing <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:08.498529 DEBUG net/identify id.go:69: IdentifyConn called twice on: <SwarmConn <peer.ID Qmbtc2> (/ip4/172.17.0.241/tcp/56568) <-- secureConn 0xc2082baa80 --> (/ip4/172.17.0.239/tcp/4011) <peer.ID QmNXuB>>
+server_1    | 2015-01-03 10:24:08.499552 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/identify
+server_1    | 2015-01-03 10:24:08.500326 DEBUG swarm2 addr.go:68: InterfaceListenAddresses:[/ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021 /ip4/172.17.0.241/udp/4022/utp /ip6/fe80::42:acff:fe11:f1/udp/4022/utp]
+server_1    | 2015-01-03 10:24:08.500438 DEBUG net/identify id.go:155: <peer.ID Qmbtc2> sent listen addrs to <peer.ID QmNXuB>: [/ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021 /ip4/172.17.0.241/udp/4022/utp /ip6/fe80::42:acff:fe11:f1/udp/4022/utp]
+server_1    | 2015-01-03 10:24:08.508500 DEBUG net/identify id.go:113: /ipfs/identify sent message to <peer.ID QmNXuB> /ip4/172.17.0.239/tcp/4011
+server_1    | 2015-01-03 10:24:08.518615 DEBUG net/identify id.go:185: <peer.ID Qmbtc2> received listen addrs for <peer.ID QmNXuB>: [/ip4/172.17.0.239/tcp/4011 /ip6/fe80::42:acff:fe11:ef/tcp/4011 /ip4/172.17.0.239/udp/4012/utp /ip6/fe80::42:acff:fe11:ef/udp/4012/utp]
+server_1    | 2015-01-03 10:24:08.518988 DEBUG net/identify id.go:130: /ipfs/identify received message from <peer.ID QmNXuB> /ip4/172.17.0.239/tcp/4011
+server_1    | 2015-01-03 10:24:08.519503 DEBUG p2p/host/basic basic_host.go:142: host %!s(func() peer.ID=0x656c60) finished dialing <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:08.521393 DEBUG dht routing.go:429: ping <peer.ID QmNXuB> start
+server_1    | 2015-01-03 10:24:08.521718 DEBUG dht dht_net.go:76: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 10:24:08.521897 DEBUG swarm2 swarm_net.go:130: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 10:24:08.524721 DEBUG swarm2 swarm.go:111: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 10:24:08.527270 DEBUG dht dht_net.go:90: <peer.ID Qmbtc2> writing
+server_1    | 2015-01-03 10:24:08.528187 DEBUG dht dht_net.go:96: <peer.ID Qmbtc2> reading
+server_1    | 2015-01-03 10:24:08.530151 DEBUG dht dht_net.go:112: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 10:24:08.530429 DEBUG dht routing.go:433: ping <peer.ID QmNXuB> end (err = %!s(<nil>))
+server_1    | 2015-01-03 10:24:08.530821 INFO core bootstrap.go:132: bootstrapped with <peer.ID QmNXuB>
+client_1    | 2015-01-03 10:24:09.254762 NOTICE updates updates.go:211: No update available, checked on 2015-01-03 10:24:09.254751166 +0000 UTC
+client_1    | 2015-01-03 10:24:09.254998 DEBUG cmd/ipfs main.go:284: Calling hook: Configure Event Logger
+client_1    | 2015-01-03 10:24:09.255041 INFO cmd/ipfs main.go:340: Executing command locally
+client_1    | added /ip4/172.17.0.239/tcp/4011/QmNXuBh8HFsWq68Fid8dMbGNQTh7eG6hV9rr1fQyfmfomE
+client_1    | dockertest> starting client daemon
+client_1    | 2015-01-03 10:24:09.270960 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+client_1    | 2015-01-03 10:24:09.302737 DEBUG cmd/ipfs main.go:218: config path is /root/.go-ipfs
+client_1    | 2015-01-03 10:24:09.303908 INFO cmd/ipfs main.go:303: looking for running daemon...
+client_1    | 2015-01-03 10:24:09.304152 DEBUG cmd/ipfs main.go:256: Calling pre-command hooks...
+client_1    | 2015-01-03 10:24:09.304239 DEBUG cmd/ipfs main.go:284: Calling hook: Configure Event Logger
+client_1    | 2015-01-03 10:24:09.304549 INFO cmd/ipfs main.go:340: Executing command locally
+client_1    | 2015-01-03 10:24:09.347757 INFO conn listen.go:116: swarm listening on /ip6/::/tcp/4031
+client_1    | 2015-01-03 10:24:09.348451 INFO conn listen.go:116: swarm listening on /ip6/::/udp/4032/utp
+client_1    | 2015-01-03 10:24:09.349063 DEBUG net/mux mux.go:81: <Muxer 0xc2081f55a0 0> setting handler for protocol: /ipfs/identify (14)
+client_1    | 2015-01-03 10:24:09.349224 DEBUG net/mux mux.go:81: <Muxer 0xc2081f55a0 1> setting handler for protocol: /ipfs/relay (11)
+client_1    | 2015-01-03 10:24:09.349836 DEBUG swarm2 addr.go:68: InterfaceListenAddresses:[/ip4/172.17.0.242/udp/4032/utp /ip6/fe80::42:acff:fe11:f2/udp/4032/utp /ip4/172.17.0.242/tcp/4031 /ip6/fe80::42:acff:fe11:f2/tcp/4031]
+client_1    | 2015-01-03 10:24:09.349879 DEBUG net/mux mux.go:81: <Muxer 0xc2081f55a0 2> setting handler for protocol: /ipfs/diagnostics (17)
+client_1    | 2015-01-03 10:24:09.349978 DEBUG net/mux mux.go:81: <Muxer 0xc2081f55a0 3> setting handler for protocol: /ipfs/dht (9)
+client_1    | 2015-01-03 10:24:09.350110 DEBUG net/mux mux.go:81: <Muxer 0xc2081f55a0 4> setting handler for protocol: /ipfs/bitswap (13)
+client_1    | daemon listening on /ip4/127.0.0.1/tcp/5001
+client_1    | 2015-01-03 10:24:09.352270 DEBUG core bootstrap.go:67: <peer.ID Qmbtc3> bootstrapping to 4 more nodes
+client_1    | 2015-01-03 10:24:09.353971 DEBUG core bootstrap.go:97: <peer.ID Qmbtc3> bootstrapping to 4 nodes: [{<peer.ID QmNXuB> [/ip4/172.17.0.239/tcp/4011]}]
+client_1    | 2015-01-03 10:24:09.355238 DEBUG core bootstrap.go:122: <peer.ID Qmbtc3> bootstrapping to <peer.ID QmNXuB>
+client_1    | 2015-01-03 10:24:09.355419 DEBUG p2p/host/basic basic_host.go:122: host %!s(func() peer.ID=0x656c60) dialing <peer.ID QmNXuB>
+client_1    | 2015-01-03 10:24:09.355532 DEBUG swarm2 swarm_net.go:35: [<peer.ID Qmbtc3>] network dialing peer [<peer.ID QmNXuB>]
+client_1    | 2015-01-03 10:24:09.355620 DEBUG conn dial.go:47: <peer.ID Qmbtc3> dialing <peer.ID QmNXuB> /ip4/172.17.0.239/tcp/4011
+bootstrap_1 | 2015-01-03 10:24:09.357191 DEBUG conn conn.go:47: newSingleConn 0xc208304200: <peer.ID QmNXuB> to <peer.ID >
+bootstrap_1 | 2015-01-03 10:24:09.357477 DEBUG secio protocol.go:83: handshake: <peer.ID QmNXuB> <--start--> <peer.ID >
+client_1    | 2015-01-03 10:24:09.357218 DEBUG conn conn.go:47: newSingleConn 0xc2082109c0: <peer.ID Qmbtc3> to <peer.ID QmNXuB>
+client_1    | 2015-01-03 10:24:09.357740 DEBUG secio protocol.go:83: handshake: <peer.ID Qmbtc3> <--start--> <peer.ID >
+client_1    | 2015-01-03 10:24:09.359893 DEBUG secio protocol.go:132: 1.1 Identify: <peer.ID Qmbtc3> Remote Peer Identified as <peer.ID QmNXuB>
+bootstrap_1 | 2015-01-03 10:24:09.360957 DEBUG secio protocol.go:132: 1.1 Identify: <peer.ID QmNXuB> Remote Peer Identified as <peer.ID Qmbtc3>
+client_1    | 2015-01-03 10:24:09.371202 DEBUG secio protocol.go:295: handshake: <peer.ID Qmbtc3> <--finish--> <peer.ID QmNXuB>
+bootstrap_1 | 2015-01-03 10:24:09.371434 DEBUG secio protocol.go:295: handshake: <peer.ID QmNXuB> <--finish--> <peer.ID Qmbtc3>
+bootstrap_1 | 2015-01-03 10:24:09.371687 DEBUG conn secure_conn.go:56: newSecureConn: <peer.ID QmNXuB> to <peer.ID Qmbtc3> handshake success!
+client_1    | 2015-01-03 10:24:09.371460 DEBUG conn secure_conn.go:56: newSecureConn: <peer.ID Qmbtc3> to <peer.ID QmNXuB> handshake success!
+client_1    | 2015-01-03 10:24:09.371863 DEBUG swarm2 swarm_net.go:41: network for <peer.ID Qmbtc3> finished dialing <peer.ID QmNXuB>
+client_1    | 2015-01-03 10:24:09.372387 DEBUG net/identify id.go:69: IdentifyConn called twice on: <SwarmConn <peer.ID Qmbtc3> (/ip4/172.17.0.242/tcp/49381) <-- secureConn 0xc2082d8930 --> (/ip4/172.17.0.239/tcp/4011) <peer.ID QmNXuB>>
+client_1    | 2015-01-03 10:24:09.374542 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/identify
+bootstrap_1 | 2015-01-03 10:24:09.374334 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/identify
+client_1    | 2015-01-03 10:24:09.374999 DEBUG swarm2 addr.go:68: InterfaceListenAddresses:[/ip4/172.17.0.242/tcp/4031 /ip6/fe80::42:acff:fe11:f2/tcp/4031 /ip4/172.17.0.242/udp/4032/utp /ip6/fe80::42:acff:fe11:f2/udp/4032/utp]
+bootstrap_1 | 2015-01-03 10:24:09.375044 DEBUG swarm2 addr.go:68: InterfaceListenAddresses:[/ip4/172.17.0.239/tcp/4011 /ip6/fe80::42:acff:fe11:ef/tcp/4011 /ip4/172.17.0.239/udp/4012/utp /ip6/fe80::42:acff:fe11:ef/udp/4012/utp]
+bootstrap_1 | 2015-01-03 10:24:09.375080 DEBUG net/identify id.go:155: <peer.ID QmNXuB> sent listen addrs to <peer.ID Qmbtc3>: [/ip4/172.17.0.239/tcp/4011 /ip6/fe80::42:acff:fe11:ef/tcp/4011 /ip4/172.17.0.239/udp/4012/utp /ip6/fe80::42:acff:fe11:ef/udp/4012/utp]
+client_1    | 2015-01-03 10:24:09.375051 DEBUG net/identify id.go:155: <peer.ID Qmbtc3> sent listen addrs to <peer.ID QmNXuB>: [/ip4/172.17.0.242/tcp/4031 /ip6/fe80::42:acff:fe11:f2/tcp/4031 /ip4/172.17.0.242/udp/4032/utp /ip6/fe80::42:acff:fe11:f2/udp/4032/utp]
+bootstrap_1 | 2015-01-03 10:24:09.380170 DEBUG net/identify id.go:185: <peer.ID QmNXuB> received listen addrs for <peer.ID Qmbtc3>: [/ip4/172.17.0.242/tcp/4031 /ip6/fe80::42:acff:fe11:f2/tcp/4031 /ip4/172.17.0.242/udp/4032/utp /ip6/fe80::42:acff:fe11:f2/udp/4032/utp]
+bootstrap_1 | 2015-01-03 10:24:09.380554 DEBUG net/identify id.go:130: /ipfs/identify received message from <peer.ID Qmbtc3> /ip4/172.17.0.242/tcp/49381
+client_1    | 2015-01-03 10:24:09.378454 DEBUG net/identify id.go:113: /ipfs/identify sent message to <peer.ID QmNXuB> /ip4/172.17.0.239/tcp/4011
+client_1    | 2015-01-03 10:24:09.382118 DEBUG net/identify id.go:185: <peer.ID Qmbtc3> received listen addrs for <peer.ID QmNXuB>: [/ip4/172.17.0.239/tcp/4011 /ip6/fe80::42:acff:fe11:ef/tcp/4011 /ip4/172.17.0.239/udp/4012/utp /ip6/fe80::42:acff:fe11:ef/udp/4012/utp]
+client_1    | 2015-01-03 10:24:09.382372 DEBUG net/identify id.go:130: /ipfs/identify received message from <peer.ID QmNXuB> /ip4/172.17.0.239/tcp/4011
+client_1    | 2015-01-03 10:24:09.384436 DEBUG p2p/host/basic basic_host.go:142: host %!s(func() peer.ID=0x656c60) finished dialing <peer.ID QmNXuB>
+bootstrap_1 | 2015-01-03 10:24:09.384635 DEBUG net/identify id.go:113: /ipfs/identify sent message to <peer.ID Qmbtc3> /ip4/172.17.0.242/tcp/49381
+client_1    | 2015-01-03 10:24:09.385060 DEBUG dht routing.go:429: ping <peer.ID QmNXuB> start
+client_1    | 2015-01-03 10:24:09.385274 DEBUG dht dht_net.go:76: <peer.ID Qmbtc3> dht starting stream
+client_1    | 2015-01-03 10:24:09.385459 DEBUG swarm2 swarm_net.go:130: [<peer.ID Qmbtc3>] network opening stream to peer [<peer.ID QmNXuB>]
+client_1    | 2015-01-03 10:24:09.385604 DEBUG swarm2 swarm.go:111: Swarm: NewStreamWithPeer...
+client_1    | 2015-01-03 10:24:09.389824 DEBUG dht dht_net.go:90: <peer.ID Qmbtc3> writing
+bootstrap_1 | 2015-01-03 10:24:09.391020 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+client_1    | 2015-01-03 10:24:09.391535 DEBUG dht dht_net.go:96: <peer.ID Qmbtc3> reading
+bootstrap_1 | 2015-01-03 10:24:09.393409 DEBUG dht handlers.go:135: <peer.ID QmNXuB> Responding to ping from <peer.ID Qmbtc3>!
+client_1    | 2015-01-03 10:24:09.394552 DEBUG dht dht_net.go:112: <peer.ID Qmbtc3> done
+client_1    | 2015-01-03 10:24:09.394843 DEBUG dht routing.go:433: ping <peer.ID QmNXuB> end (err = %!s(<nil>))
+client_1    | 2015-01-03 10:24:09.395511 INFO core bootstrap.go:132: bootstrapped with <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.371751 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+server_1    | 2015-01-03 10:24:11.404555 DEBUG cmd/ipfs main.go:218: config path is /root/.go-ipfs
+server_1    | 2015-01-03 10:24:11.405034 INFO cmd/ipfs main.go:303: looking for running daemon...
+server_1    | 2015-01-03 10:24:11.405241 INFO cmd/ipfs main.go:398: a daemon is running...
+server_1    | 2015-01-03 10:24:11.405348 DEBUG cmd/ipfs main.go:256: Calling pre-command hooks...
+server_1    | 2015-01-03 10:24:11.405415 INFO cmd/ipfs main.go:398: a daemon is running...
+server_1    | 2015-01-03 10:24:11.405451 DEBUG cmd/ipfs main.go:284: Calling hook: Configure Event Logger
+server_1    | 2015-01-03 10:24:11.406402 INFO cmd/ipfs main.go:326: Executing command on daemon running at /ip4/127.0.0.1/tcp/5001
+server_1    | 2015-01-03 10:24:11.413122 DEBUG commands/http handler.go:43: Incoming API request: /api/v0/add?encoding=json&q=true
+server_1    | 2015-01-03 10:24:11.413993 DEBUG dht query.go:99: Run query with 1 peers.
+server_1    | 2015-01-03 10:24:11.414556 DEBUG dht query.go:159: adding peer to query: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.414730 DEBUG dht dht_net.go:118: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 10:24:11.414910 DEBUG swarm2 swarm_net.go:130: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 10:24:11.418610 DEBUG swarm2 swarm.go:111: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 10:24:11.417550 DEBUG dht query.go:183: spawning worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.423778 DEBUG dht dht_net.go:128: <peer.ID Qmbtc2> writing
+bootstrap_1 | 2015-01-03 10:24:11.424410 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+server_1    | 2015-01-03 10:24:11.427708 DEBUG dht dht_net.go:133: <peer.ID Qmbtc2> done
+bootstrap_1 | 2015-01-03 10:24:11.429332 DEBUG dht handlers.go:216: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for 'QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf'
+server_1    | 2015-01-03 10:24:11.425999 DEBUG dht query.go:195: spawned worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.429122 DEBUG dht query.go:206: running worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.429275 DEBUG dht dht.go:141: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf ([/ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021 /ip4/172.17.0.241/udp/4022/utp /ip6/fe80::42:acff:fe11:f1/udp/4022/utp])
+server_1    | 2015-01-03 10:24:11.429417 DEBUG dht dht_net.go:76: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 10:24:11.429547 DEBUG swarm2 swarm_net.go:130: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 10:24:11.429654 DEBUG swarm2 swarm.go:111: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 10:24:11.430918 DEBUG dht dht_net.go:90: <peer.ID Qmbtc2> writing
+bootstrap_1 | 2015-01-03 10:24:11.432933 INFO dht handlers.go:233: received provider <peer.ID Qmbtc2> for QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf (addrs: [/ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021 /ip4/172.17.0.241/udp/4022/utp /ip6/fe80::42:acff:fe11:f1/udp/4022/utp])
+bootstrap_1 | 2015-01-03 10:24:11.436017 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+server_1    | 2015-01-03 10:24:11.440046 DEBUG dht dht_net.go:96: <peer.ID Qmbtc2> reading
+bootstrap_1 | 2015-01-03 10:24:11.440367 WARNING dht handlers.go:151: handleFindPeer: could not find anything.
+server_1    | 2015-01-03 10:24:11.445659 DEBUG dht dht_net.go:112: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 10:24:11.446684 DEBUG dht query.go:258: QUERY worker for: <peer.ID QmNXuB> - not found, and no closer peers.
+server_1    | 2015-01-03 10:24:11.446878 DEBUG dht query.go:211: completing worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.446961 ERROR dht routing.go:201: closestPeers query run error: routing: not found
+server_1    | 2015-01-03 10:24:11.447124 INFO core/commands add.go:142: adding file: /data/filetiny
+server_1    | dockertest> added tiny file. hash is QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+server_1    | 2015-01-03 10:24:11.468322 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+server_1    | 2015-01-03 10:24:11.501446 DEBUG cmd/ipfs main.go:218: config path is /root/.go-ipfs
+server_1    | 2015-01-03 10:24:11.502272 INFO cmd/ipfs main.go:303: looking for running daemon...
+server_1    | 2015-01-03 10:24:11.502528 INFO cmd/ipfs main.go:398: a daemon is running...
+server_1    | 2015-01-03 10:24:11.502592 DEBUG cmd/ipfs main.go:256: Calling pre-command hooks...
+server_1    | 2015-01-03 10:24:11.502635 INFO cmd/ipfs main.go:398: a daemon is running...
+server_1    | 2015-01-03 10:24:11.502655 DEBUG cmd/ipfs main.go:284: Calling hook: Configure Event Logger
+server_1    | 2015-01-03 10:24:11.503156 INFO cmd/ipfs main.go:326: Executing command on daemon running at /ip4/127.0.0.1/tcp/5001
+server_1    | 2015-01-03 10:24:11.512152 DEBUG commands/http handler.go:43: Incoming API request: /api/v0/add?encoding=json&q=true
+server_1    | 2015-01-03 10:24:11.520961 DEBUG dht query.go:99: Run query with 1 peers.
+server_1    | 2015-01-03 10:24:11.521020 DEBUG dht query.go:159: adding peer to query: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.521043 DEBUG dht dht_net.go:118: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 10:24:11.522738 DEBUG swarm2 swarm_net.go:130: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 10:24:11.522993 DEBUG swarm2 swarm.go:111: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 10:24:11.523030 DEBUG dht query.go:183: spawning worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.523117 DEBUG dht query.go:195: spawned worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.523173 DEBUG dht query.go:206: running worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.523233 DEBUG dht dht_net.go:76: <peer.ID Qmbtc2> dht starting stream
+bootstrap_1 | 2015-01-03 10:24:11.526776 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 10:24:11.530748 DEBUG dht handlers.go:216: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for 'QmPUoDYMKu6v8SgFAjFDbuvfvY6oPopDyfZmnEWMcXYNtd'
+server_1    | 2015-01-03 10:24:11.526323 DEBUG dht dht_net.go:128: <peer.ID Qmbtc2> writing
+server_1    | 2015-01-03 10:24:11.528085 DEBUG dht dht_net.go:133: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 10:24:11.523430 DEBUG swarm2 swarm_net.go:130: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 10:24:11.528260 DEBUG swarm2 swarm.go:111: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 10:24:11.528297 DEBUG dht dht.go:141: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmPUoDYMKu6v8SgFAjFDbuvfvY6oPopDyfZmnEWMcXYNtd ([/ip6/fe80::42:acff:fe11:f1/udp/4022/utp /ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021 /ip4/172.17.0.241/udp/4022/utp])
+bootstrap_1 | 2015-01-03 10:24:11.531749 INFO dht handlers.go:233: received provider <peer.ID Qmbtc2> for QmPUoDYMKu6v8SgFAjFDbuvfvY6oPopDyfZmnEWMcXYNtd (addrs: [/ip6/fe80::42:acff:fe11:f1/udp/4022/utp /ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021 /ip4/172.17.0.241/udp/4022/utp])
+bootstrap_1 | 2015-01-03 10:24:11.533261 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+server_1    | 2015-01-03 10:24:11.533474 DEBUG dht dht_net.go:90: <peer.ID Qmbtc2> writing
+bootstrap_1 | 2015-01-03 10:24:11.534671 WARNING dht handlers.go:151: handleFindPeer: could not find anything.
+server_1    | 2015-01-03 10:24:11.534416 DEBUG dht dht_net.go:96: <peer.ID Qmbtc2> reading
+server_1    | 2015-01-03 10:24:11.537670 DEBUG dht dht_net.go:112: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 10:24:11.537897 DEBUG dht query.go:258: QUERY worker for: <peer.ID QmNXuB> - not found, and no closer peers.
+server_1    | 2015-01-03 10:24:11.537960 DEBUG dht query.go:211: completing worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.538036 ERROR dht routing.go:201: closestPeers query run error: routing: not found
+server_1    | 2015-01-03 10:24:11.545538 DEBUG dht query.go:99: Run query with 1 peers.
+server_1    | 2015-01-03 10:24:11.545861 DEBUG dht query.go:159: adding peer to query: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.545602 DEBUG dht dht_net.go:118: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 10:24:11.547258 DEBUG swarm2 swarm_net.go:130: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 10:24:11.547458 DEBUG swarm2 swarm.go:111: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 10:24:11.547571 DEBUG dht query.go:183: spawning worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.549059 DEBUG dht query.go:195: spawned worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.549504 DEBUG dht query.go:206: running worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.549575 DEBUG dht dht_net.go:76: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 10:24:11.549661 DEBUG swarm2 swarm_net.go:130: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID QmNXuB>]
+server_1    | 2015-01-03 10:24:11.549747 DEBUG swarm2 swarm.go:111: Swarm: NewStreamWithPeer...
+server_1    | 2015-01-03 10:24:11.554526 DEBUG dht dht_net.go:128: <peer.ID Qmbtc2> writing
+server_1    | 2015-01-03 10:24:11.555200 DEBUG dht dht_net.go:90: <peer.ID Qmbtc2> writing
+bootstrap_1 | 2015-01-03 10:24:11.555111 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 10:24:11.558517 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+server_1    | 2015-01-03 10:24:11.555966 DEBUG dht dht_net.go:133: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 10:24:11.558580 DEBUG dht dht.go:141: <peer.ID Qmbtc2> putProvider: <peer.ID QmNXuB> for QmeB1anPKde94oJ5jVtTjgqqRFyGGcG5DNHyBp3YS8GdcQ ([/ip4/172.17.0.241/udp/4022/utp /ip6/fe80::42:acff:fe11:f1/udp/4022/utp /ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021])
+server_1    | 2015-01-03 10:24:11.559505 DEBUG dht dht_net.go:96: <peer.ID Qmbtc2> reading
+bootstrap_1 | 2015-01-03 10:24:11.559212 DEBUG dht handlers.go:216: <peer.ID QmNXuB> adding <peer.ID Qmbtc2> as a provider for 'QmeB1anPKde94oJ5jVtTjgqqRFyGGcG5DNHyBp3YS8GdcQ'
+bootstrap_1 | 2015-01-03 10:24:11.559809 INFO dht handlers.go:233: received provider <peer.ID Qmbtc2> for QmeB1anPKde94oJ5jVtTjgqqRFyGGcG5DNHyBp3YS8GdcQ (addrs: [/ip4/172.17.0.241/udp/4022/utp /ip6/fe80::42:acff:fe11:f1/udp/4022/utp /ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021])
+bootstrap_1 | 2015-01-03 10:24:11.569199 DEBUG dht handlers.go:160: handleFindPeer: sending back '<peer.ID Qmbtc3>'
+server_1    | 2015-01-03 10:24:11.571499 DEBUG dht dht_net.go:112: <peer.ID Qmbtc2> done
+server_1    | 2015-01-03 10:24:11.572085 DEBUG dht query.go:250: PEERS CLOSER -- worker for: <peer.ID QmNXuB> (1 closer peers)
+server_1    | 2015-01-03 10:24:11.572183 DEBUG dht query.go:159: adding peer to query: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 10:24:11.572240 DEBUG dht query.go:255: PEERS CLOSER -- worker for: <peer.ID QmNXuB> added <peer.ID Qmbtc3> ([/ip4/172.17.0.242/udp/4032/utp /ip6/fe80::42:acff:fe11:f2/udp/4032/utp /ip4/172.17.0.242/tcp/4031 /ip6/fe80::42:acff:fe11:f2/tcp/4031])
+server_1    | 2015-01-03 10:24:11.572294 DEBUG dht query.go:211: completing worker for: <peer.ID QmNXuB>
+server_1    | 2015-01-03 10:24:11.572405 DEBUG dht dht_net.go:118: <peer.ID Qmbtc2> dht starting stream
+server_1    | 2015-01-03 10:24:11.572472 DEBUG swarm2 swarm_net.go:130: [<peer.ID Qmbtc2>] network opening stream to peer [<peer.ID Qmbtc3>]
+server_1    | 2015-01-03 10:24:11.572796 DEBUG swarm2 swarm.go:106: Swarm: NewStreamWithPeer no connections. Attempting to connect...
+server_1    | 2015-01-03 10:24:11.574109 DEBUG dht query.go:183: spawning worker for: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 10:24:11.574281 DEBUG dht query.go:195: spawned worker for: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 10:24:11.574198 DEBUG conn dial.go:47: <peer.ID Qmbtc2> dialing <peer.ID Qmbtc3> /ip4/172.17.0.242/udp/4032/utp
+server_1    | 2015-01-03 10:24:11.574392 DEBUG dht query.go:206: running worker for: <peer.ID Qmbtc3>
+server_1    | 2015-01-03 10:24:11.574457 INFO dht query.go:218: worker for: <peer.ID Qmbtc3> -- not connected. dial start
+server_1    | 2015-01-03 10:24:11.574521 DEBUG p2p/host/basic basic_host.go:122: host %!s(func() peer.ID=0x656c60) dialing <peer.ID Qmbtc3>
+server_1    | 2015-01-03 10:24:11.574649 DEBUG swarm2 swarm_net.go:35: [<peer.ID Qmbtc2>] network dialing peer [<peer.ID Qmbtc3>]
+server_1    | 2015-01-03 10:24:11.574762 DEBUG conn dial.go:47: <peer.ID Qmbtc2> dialing <peer.ID Qmbtc3> /ip6/fe80::42:acff:fe11:f2/tcp/4031
+server_1    | 2015-01-03 10:24:11.574919 DEBUG conn dial.go:47: <peer.ID Qmbtc2> dialing <peer.ID Qmbtc3> /ip4/172.17.0.242/udp/4032/utp
+client_1    | 2015-01-03 10:24:11.577548 DEBUG conn conn.go:47: newSingleConn 0xc2081f9900: <peer.ID Qmbtc3> to <peer.ID >
+client_1    | 2015-01-03 10:24:11.578087 DEBUG secio protocol.go:83: handshake: <peer.ID Qmbtc3> <--start--> <peer.ID >
+server_1    | 2015-01-03 10:24:11.577850 DEBUG conn conn.go:47: newSingleConn 0xc20804d340: <peer.ID Qmbtc2> to <peer.ID Qmbtc3>
+server_1    | 2015-01-03 10:24:11.578620 DEBUG secio protocol.go:83: handshake: <peer.ID Qmbtc2> <--start--> <peer.ID >
+server_1    | 2015-01-03 10:24:11.581778 DEBUG conn conn.go:47: newSingleConn 0xc2080f6b80: <peer.ID Qmbtc2> to <peer.ID Qmbtc3>
+server_1    | 2015-01-03 10:24:11.582073 DEBUG secio protocol.go:83: handshake: <peer.ID Qmbtc2> <--start--> <peer.ID >
+client_1    | dockertest> client found file with hash: QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+client_1    | 2015-01-03 10:24:12.287005 INFO updates updates.go:94: go-ipfs Version: 0.1.7
+client_1    | 2015-01-03 10:24:12.319375 DEBUG cmd/ipfs main.go:218: config path is /root/.go-ipfs
+client_1    | 2015-01-03 10:24:12.321464 INFO cmd/ipfs main.go:303: looking for running daemon...
+client_1    | 2015-01-03 10:24:12.321835 INFO cmd/ipfs main.go:398: a daemon is running...
+client_1    | 2015-01-03 10:24:12.321920 DEBUG cmd/ipfs main.go:256: Calling pre-command hooks...
+client_1    | 2015-01-03 10:24:12.321969 INFO cmd/ipfs main.go:398: a daemon is running...
+client_1    | 2015-01-03 10:24:12.321990 DEBUG cmd/ipfs main.go:284: Calling hook: Configure Event Logger
+client_1    | 2015-01-03 10:24:12.322175 INFO cmd/ipfs main.go:326: Executing command on daemon running at /ip4/127.0.0.1/tcp/5001
+client_1    | 2015-01-03 10:24:12.333675 DEBUG commands/http handler.go:43: Incoming API request: /api/v0/cat?arg=QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf&encoding=json
+client_1    | 2015-01-03 10:24:12.333929 DEBUG path path.go:26: Resolve: 'QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf'
+client_1    | 2015-01-03 10:24:12.337055 DEBUG path path.go:48: Resolve dag get.
+client_1    | 2015-01-03 10:24:12.337185 DEBUG blockservice blockservice.go:65: BlockService GetBlock: 'QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf'
+client_1    | 2015-01-03 10:24:12.337588 DEBUG blockservice blockservice.go:72: Blockservice: Searching bitswap.
+client_1    | 2015-01-03 10:24:12.339798 DEBUG dht routing.go:236: <peer.ID Qmbtc3> FindProviders QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+client_1    | 2015-01-03 10:24:12.340637 DEBUG dht query.go:99: Run query with 1 peers.
+client_1    | 2015-01-03 10:24:12.340675 DEBUG dht query.go:159: adding peer to query: <peer.ID QmNXuB>
+client_1    | 2015-01-03 10:24:12.340767 DEBUG dht query.go:183: spawning worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 10:24:12.340849 DEBUG dht query.go:195: spawned worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 10:24:12.340890 DEBUG dht query.go:206: running worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 10:24:12.341057 DEBUG dht routing.go:260: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  begin
+client_1    | 2015-01-03 10:24:12.341105 DEBUG dht dht_net.go:76: <peer.ID Qmbtc3> dht starting stream
+client_1    | 2015-01-03 10:24:12.341150 DEBUG swarm2 swarm_net.go:130: [<peer.ID Qmbtc3>] network opening stream to peer [<peer.ID QmNXuB>]
+client_1    | 2015-01-03 10:24:12.341228 DEBUG swarm2 swarm.go:111: Swarm: NewStreamWithPeer...
+client_1    | 2015-01-03 10:24:12.342304 DEBUG dht dht_net.go:90: <peer.ID Qmbtc3> writing
+client_1    | 2015-01-03 10:24:12.342627 DEBUG dht dht_net.go:96: <peer.ID Qmbtc3> reading
+bootstrap_1 | 2015-01-03 10:24:12.348430 INFO net/mux mux.go:108: muxer handle protocol: /ipfs/dht
+bootstrap_1 | 2015-01-03 10:24:12.349887 DEBUG dht handlers.go:174: <peer.ID QmNXuB> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  begin
+bootstrap_1 | 2015-01-03 10:24:12.350163 DEBUG dht handlers.go:194: <peer.ID QmNXuB> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  have 1 providers: [{<peer.ID Qmbtc2> [/ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021 /ip4/172.17.0.241/udp/4022/utp /ip6/fe80::42:acff:fe11:f1/udp/4022/utp]}]
+bootstrap_1 | 2015-01-03 10:24:12.350704 DEBUG dht handlers.go:205: <peer.ID QmNXuB> handleGetProviders(<peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf):  end
+client_1    | 2015-01-03 10:24:12.356329 DEBUG dht dht_net.go:112: <peer.ID Qmbtc3> done
+client_1    | 2015-01-03 10:24:12.356971 DEBUG dht routing.go:268: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got 1 provider entries
+client_1    | 2015-01-03 10:24:12.357155 DEBUG dht routing.go:270: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got 1 provider entries decoded
+client_1    | 2015-01-03 10:24:12.357199 DEBUG dht routing.go:274: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got provider: {<peer.ID Qmbtc2> [/ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021 /ip4/172.17.0.241/udp/4022/utp /ip6/fe80::42:acff:fe11:f1/udp/4022/utp]}
+client_1    | 2015-01-03 10:24:12.359896 DEBUG dht routing.go:276: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  using provider: {<peer.ID Qmbtc2> [/ip4/172.17.0.241/tcp/4021 /ip6/fe80::42:acff:fe11:f1/tcp/4021 /ip4/172.17.0.241/udp/4022/utp /ip6/fe80::42:acff:fe11:f1/udp/4022/utp]}
+client_1    | 2015-01-03 10:24:12.360123 DEBUG dht routing.go:293: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  got closer peers: []
+client_1    | 2015-01-03 10:24:12.360156 DEBUG dht routing.go:294: <peer.ID Qmbtc3> findProviders(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf).Query(<peer.ID QmNXuB>):  end
+client_1    | 2015-01-03 10:24:12.360185 DEBUG dht query.go:258: QUERY worker for: <peer.ID QmNXuB> - not found, and no closer peers.
+client_1    | 2015-01-03 10:24:12.360238 DEBUG dht query.go:211: completing worker for: <peer.ID QmNXuB>
+client_1    | 2015-01-03 10:24:12.360466 DEBUG p2p/host/basic basic_host.go:122: host %!s(func() peer.ID=0x656c60) dialing <peer.ID Qmbtc2>
+client_1    | 2015-01-03 10:24:12.360595 DEBUG swarm2 swarm_net.go:35: [<peer.ID Qmbtc3>] network dialing peer [<peer.ID Qmbtc2>]
+client_1    | 2015-01-03 10:24:12.360637 ERROR dht routing.go:300: FindProviders Query error: routing: not found
+client_1    | 2015-01-03 10:24:12.360887 DEBUG conn dial.go:47: <peer.ID Qmbtc3> dialing <peer.ID Qmbtc2> /ip6/fe80::42:acff:fe11:f1/udp/4022/utp
+server_1    | 2015-01-03 10:24:12.366671 DEBUG conn conn.go:47: newSingleConn 0xc2080f7280: <peer.ID Qmbtc2> to <peer.ID >
+server_1    | 2015-01-03 10:24:12.366862 DEBUG secio protocol.go:83: handshake: <peer.ID Qmbtc2> <--start--> <peer.ID >
+bootstrap_1 | 2015-01-03 10:24:15.923427 DEBUG bitswap bitswap.go:200: <peer.ID QmNXuB> bitswap.sendWantlistToProviders begin
+bootstrap_1 | 2015-01-03 10:24:15.925286 DEBUG bitswap bitswap.go:239: <peer.ID QmNXuB> bitswap.sendWantlistToProviders end
+client_1    | Error: context deadline exceeded
+client_1    | --- filetiny	2015-01-03 10:24:12.268057606 +0000
+client_1    | +++ /data/filetiny	2015-01-03 10:23:27.000000000 +0000
+client_1    | @@ -0,0 +1,34 @@
+client_1    | +RANDOMSRC = Godeps/_workspace/src/github.com/jbenet/go-random/random
+client_1    | +IMAGE_NAME = ipfs-test-latest
+client_1    | +
+client_1    | +test: clean setup
+client_1    | +	./run-test-on-img.sh $(IMAGE_NAME)
+client_1    | +
+client_1    | +setup: docker_ipfs_image data/filetiny data/filerand
+client_1    | +
+client_1    | +save_logs:
+client_1    | +	sh bin/save_logs.sh
+client_1    | +
+client_1    | +data/filetiny: Makefile
+client_1    | +	cp Makefile ./data/filetiny # simple
+client_1    | +
+client_1    | +data/filerand: bin/random
+client_1    | +	./bin/random 50000000 > ./data/filerand
+client_1    | +
+client_1    | +bin/random:
+client_1    | +	go build -o ./bin/random ../$(RANDOMSRC)
+client_1    | +
+client_1    | +# just build it every time... this part isn't
+client_1    | +# even the lengthy part, and it decreases pain.
+client_1    | +docker_ipfs_image:
+client_1    | +	cd .. && docker build -t $(IMAGE_NAME) .
+client_1    | +	docker images | grep $(IMAGE_NAME)
+client_1    | +
+client_1    | +clean:
+client_1    | +	sh bin/clean.sh
+client_1    | +	fig stop
+client_1    | +	fig rm -v --force
+client_1    | +	rm -f bin/random
+client_1    | +	rm -f data/filetiny
+client_1    | +	rm -f data/filerand
+client_1    | +	rm -rf build/*
+client_1    | files did not match
+bootstrap_1 | 2015-01-03 10:24:17.495392 DEBUG conn conn.go:53: <peer.ID QmNXuB> closing Conn with <peer.ID >
+bootstrap_1 | 2015-01-03 10:24:17.496004 DEBUG conn conn.go:53: <peer.ID QmNXuB> closing Conn with <peer.ID >
+bootstrap_1 | 2015-01-03 10:24:17.496146 DEBUG conn conn.go:53: <peer.ID QmNXuB> closing Conn with <peer.ID >
+dockertest_client_1 exited with code 1
+Gracefully stopping... (press Ctrl+C again to force)
+make save_logs
+sh bin/save_logs.sh
+tail build/fig.log | grep "exited with code 0"
