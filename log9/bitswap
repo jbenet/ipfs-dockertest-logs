@@ -1,0 +1,54 @@
+bootstrap_1 | 2015-01-03 17:50:10.436851 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081e95f0 4> setting handler for protocol: /ipfs/bitswap (13)
+server_1    | 2015-01-03 17:50:14.207385 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081f6ba0 4> setting handler for protocol: /ipfs/bitswap (13)
+client_1    | 2015-01-03 17:50:15.657473 DEBUG net/mux prefixlog.go:107: <Muxer 0xc2081e70a0 4> setting handler for protocol: /ipfs/bitswap (13)
+client_1    | 2015-01-03 17:50:18.687487 DEBUG blockservice blockservice.go:72: Blockservice: Searching bitswap.
+client_1    | 2015-01-03 17:50:18.687669 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).GetBlock(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf) GetBlockRequestBegin
+client_1    | 2015-01-03 17:50:18.687914 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistMsgToPeers(1) begin
+client_1    | 2015-01-03 17:50:18.709931 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistMsgToPeers(1) <peer.ID Qmbtc2> sending
+client_1    | 2015-01-03 17:50:18.710388 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).bitswap.sendWantlistMsgToPeer(1, <peer.ID Qmbtc2>) sending wantlist
+client_1    | 2015-01-03 17:50:18.710558 DEBUG bitswap_network prefixlog.go:107: bitswap net SendMessage to <peer.ID Qmbtc2> opening stream
+server_1    | 2015-01-03 17:50:18.715225 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/bitswap
+client_1    | 2015-01-03 17:50:18.712598 DEBUG bitswap_network prefixlog.go:107: bitswap net SendMessage to <peer.ID Qmbtc2> sending
+client_1    | 2015-01-03 17:50:18.717391 DEBUG bitswap_network prefixlog.go:107: bitswap net SendMessage to <peer.ID Qmbtc2> sent
+client_1    | 2015-01-03 17:50:18.717943 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).bitswap.sendWantlistMsgToPeer(1, <peer.ID Qmbtc2>) send wantlist success
+server_1    | 2015-01-03 17:50:18.726743 DEBUG bitswap_network prefixlog.go:107: bitswap net handleNewStream from <peer.ID Qmbtc3>
+server_1    | 2015-01-03 17:50:18.726986 DEBUG bitswap prefixlog.go:107: ReceiveMessage from <peer.ID Qmbtc3>
+server_1    | 2015-01-03 17:50:18.727083 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) enter
+server_1    | 2015-01-03 17:50:18.727149 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) wants QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf 2147483647
+server_1    | 2015-01-03 17:50:18.727327 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) exit
+server_1    | 2015-01-03 17:50:18.727371 DEBUG engine prefixlog.go:107: bitswap.Engine.taskWorker woken up
+server_1    | 2015-01-03 17:50:18.727457 DEBUG engine prefixlog.go:107: bitswap.Engine.taskWorker <Task <peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf, false> processing
+server_1    | 2015-01-03 17:50:18.728814 DEBUG engine prefixlog.go:107: bitswap.Engine.taskWorker <Task <peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf, false> sending...
+server_1    | 2015-01-03 17:50:18.729648 DEBUG engine prefixlog.go:107: bitswap.Engine.taskWorker <Task <peer.ID Qmbtc3>, QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf, false> sent
+server_1    | 2015-01-03 17:50:18.729758 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc2>).taskWorker message to <peer.ID Qmbtc3> sending...
+server_1    | 2015-01-03 17:50:18.729958 DEBUG bitswap_network prefixlog.go:107: bitswap net SendMessage to <peer.ID Qmbtc3> opening stream
+server_1    | 2015-01-03 17:50:18.736445 DEBUG bitswap_network prefixlog.go:107: bitswap net SendMessage to <peer.ID Qmbtc3> sending
+server_1    | 2015-01-03 17:50:18.737573 DEBUG bitswap_network prefixlog.go:107: bitswap net SendMessage to <peer.ID Qmbtc3> sent
+server_1    | 2015-01-03 17:50:18.737856 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc2>).taskWorker message to <peer.ID Qmbtc3> sent
+client_1    | 2015-01-03 17:50:18.740227 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/bitswap
+client_1    | 2015-01-03 17:50:18.741472 DEBUG bitswap_network prefixlog.go:107: bitswap net handleNewStream from <peer.ID Qmbtc2>
+client_1    | 2015-01-03 17:50:18.741541 DEBUG bitswap prefixlog.go:107: ReceiveMessage from <peer.ID Qmbtc2>
+client_1    | 2015-01-03 17:50:18.741598 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc2>) enter
+client_1    | 2015-01-03 17:50:18.741649 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc2>) got block %s %d bytes QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf 760
+client_1    | 2015-01-03 17:50:18.741815 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc2>) exit
+client_1    | 2015-01-03 17:50:18.743978 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).GetBlock(QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf) GetBlockRequestEnd
+client_1    | 2015-01-03 17:50:18.748017 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistMsgToPeers(1) end
+client_1    | 2015-01-03 17:50:18.748339 WARNING bitswap prefixlog.go:125: Received batch request for zero blocks
+client_1    | 2015-01-03 17:50:18.816149 DEBUG bitswap_network prefixlog.go:107: bitswap net SendMessage to <peer.ID Qmbtc2> opening stream
+client_1    | 2015-01-03 17:50:18.818468 DEBUG bitswap_network prefixlog.go:107: bitswap net SendMessage to <peer.ID Qmbtc2> sending
+client_1    | 2015-01-03 17:50:18.819359 DEBUG bitswap_network prefixlog.go:107: bitswap net SendMessage to <peer.ID Qmbtc2> sent
+server_1    | 2015-01-03 17:50:18.821551 INFO net/mux prefixlog.go:116: muxer handle protocol: /ipfs/bitswap
+server_1    | 2015-01-03 17:50:18.821757 DEBUG bitswap_network prefixlog.go:107: bitswap net handleNewStream from <peer.ID Qmbtc3>
+server_1    | 2015-01-03 17:50:18.821985 DEBUG bitswap prefixlog.go:107: ReceiveMessage from <peer.ID Qmbtc3>
+server_1    | 2015-01-03 17:50:18.822318 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) enter
+server_1    | 2015-01-03 17:50:18.822394 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) cancel QmcdNXWTJeBd4fKq1vsUWhP8Uy2azPXiRcVozsNgwzP1sf
+server_1    | 2015-01-03 17:50:18.822480 DEBUG engine prefixlog.go:107: bitswap.Engine.MessageReceived(<peer.ID Qmbtc3>) exit
+bootstrap_1 | 2015-01-03 17:50:20.439781 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID QmNXuB>).sendWantlistToProviders  begin
+bootstrap_1 | 2015-01-03 17:50:20.439860 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID QmNXuB>).sendWantlistMsgToPeers(0) begin
+server_1    | 2015-01-03 17:50:24.211710 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc2>).sendWantlistToProviders  begin
+server_1    | 2015-01-03 17:50:24.212145 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc2>).sendWantlistMsgToPeers(0) begin
+client_1    | 2015-01-03 17:50:25.658782 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistToProviders  begin
+client_1    | 2015-01-03 17:50:25.658980 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).sendWantlistMsgToPeers(0) begin
+client_1    | 2015-01-03 17:50:25.908874 DEBUG blockservice blockservice.go:72: Blockservice: Searching bitswap.
+client_1    | 2015-01-03 17:50:25.909074 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).GetBlock(QmVyVRwQ6Vf5GhJs41ERUVXzRak2txmEQUWY8P2rkg9EJV) GetBlockRequestBegin
+client_1    | 2015-01-03 17:51:25.912473 DEBUG bitswap prefixlog.go:107: bitswap(<peer.ID Qmbtc3>).GetBlock(QmVyVRwQ6Vf5GhJs41ERUVXzRak2txmEQUWY8P2rkg9EJV) GetBlockRequestEnd
